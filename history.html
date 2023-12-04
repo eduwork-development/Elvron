@@ -8,7 +8,7 @@
   <body class="font-manrope">
     <!-- NavBar Start -->
     <div class="w-full z-[99] font-poppins" id="navbar">
-      <nav class="fixed w-full z-20 top-0 left-0">
+      <nav class="fixed w-full z-[99] top-0 left-0">
         <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="images/logo-white.png" class="h-6" alt="Flowbite Logo" />
@@ -52,7 +52,7 @@
           <div class="hidden w-full md:w-auto" id="navbar-default">
             <ul class="flex flex-col p-4 md:p-0 mt-4 font-light border md:justify-between border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
               <li>
-                <a href="index.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 font-[300]">Home</a>
+                <a href="" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 font-[300]">Home</a>
               </li>
               <li>
                 <a href="" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">Community</a>
@@ -64,7 +64,7 @@
                 <a href="" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">Portfolio</a>
               </li>
               <li>
-                <a href="news.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">News</a>
+                <a href="/news.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">News</a>
               </li>
             </ul>
           </div>
@@ -78,74 +78,107 @@
       class="h-[600px] md:h-[600px]"
       style="
         background: linear-gradient(279deg, rgba(0, 0, 0, 0.75) 2.22%, rgba(72, 69, 69, 0.59) 60.85%, rgba(161, 157, 157, 0) 95.53%), linear-gradient(86deg, rgba(0, 0, 0, 0.68) 28.42%, rgba(0, 0, 0, 0.5) 64.57%, rgba(0, 0, 0, 0) 88.42%),
-          url('./images/bg-ourteam.png') no-repeat;
+          url('./images/bg-history.png') no-repeat;
         background-size: cover;
       "
     >
       <div class="container mx-auto h-[600px] md:h-[600px] text-white lg:max-w-[1000px] w-[95%] flex flex-col lg:gap-0 gap-[20px] text-center justify-center items-center lg:items-center">
-        <p class="text-[50px] font-[600]">Our Teams</p>
+        <p class="text-[50px] font-[600]">History</p>
         <p class="text-[22px] font-[400]">Portofolio menampilkan rangkaian proyek desain yang mencakup antarmuka pengguna yang intuitif, visual yang menarik, dan solusi. pengguna visual</p>
       </div>
     </div>
     <!-- Hero Section End -->
 
-    <!-- Team Section Start -->
-    <div class="container mx-auto md:max-w-[1000px] w-[95%] flex flex-col mt-[50px] gap-[20px]">
-      <div class="flex flex-col md:flex-row md:gap-[20px]">
-        <div class="flex flex-col text-center items-center justify-center">
-          <img src="images/team1.png" class="w-[95%] md:w-[260px] h-auto" alt="" />
-          <p class="text-[18px] font-bold my-[5px]">Shafana Intan</p>
-          <p class="text-[16px] mb-[10px]">Chief Operational Officer</p>
-          <p class="text-[15px]">Melewati tantangan, dan tumbuh dengan pengalaman. Mengukir jalan menuju kesuksesan, saya mengejar impian dan meraih pencapaian dalam perjalanan karir dalam bidang yang saya inginkan</p>
-        </div>
-        <div class="flex flex-col text-center items-center justify-center">
-          <img src="images/team2.png" class="w-[95%] md:w-[260px] h-auto" alt="" />
-          <p class="text-[18px] font-bold my-[5px]">Shafana Intan</p>
-          <p class="text-[16px] mb-[10px]">Chief Operational Officer</p>
-          <p class="text-[15px]">Melewati tantangan, dan tumbuh dengan pengalaman. Mengukir jalan menuju kesuksesan, saya mengejar impian dan meraih pencapaian dalam perjalanan karir dalam bidang yang saya inginkan</p>
-        </div>
-        <div class="flex flex-col text-center items-center justify-center">
-          <img src="images/team3.png" class="w-[95%] md:w-[260px] h-auto" alt="" />
-          <p class="text-[18px] font-bold my-[5px]">Shafana Intan</p>
-          <p class="text-[16px] mb-[10px]">Chief Operational Officer</p>
-          <p class="text-[15px]">Melewati tantangan, dan tumbuh dengan pengalaman. Mengukir jalan menuju kesuksesan, saya mengejar impian dan meraih pencapaian dalam perjalanan karir dalam bidang yang saya inginkan</p>
-        </div>
-        <div class="flex flex-col text-center items-center justify-center">
-          <img src="images/team4.png" class="w-[95%] md:w-[260px] h-auto" alt="" />
-          <p class="text-[18px] font-bold my-[5px]">Shafana Intan</p>
-          <p class="text-[16px] mb-[10px]">Chief Operational Officer</p>
-          <p class="text-[15px]">Melewati tantangan, dan tumbuh dengan pengalaman. Mengukir jalan menuju kesuksesan, saya mengejar impian dan meraih pencapaian dalam perjalanan karir dalam bidang yang saya inginkan</p>
+    <!-- History Content Start -->
+    <section class="font-roboto pt-10 pb-10 sm:pb-24 sm:pt-8">
+      <div class="flex flex-col justify-start items-center w-[90%] md:max-w-[1024px] lg:max-w-[1016px] h-fit mx-auto">
+        <div class="flex z-20 w-full mt-0 md:mt-16">
+          <div class="flex relative gap-x-10 w-full mt-16">
+            <div class="absolute z-10 border-l-2 md:ml-auto ml-2 border-dashed border-gray-500 left-0 right-0 m-auto w-0 h-full"></div>
+            <div class="flex z-10 flex-col gap-y-10 md:gap-y-[150px] md:pl-0 pl-12">
+              <div class="flex gap-x-10 mt-8 md:mt-8 md:gap-x-[160px]">
+                <div class="flex flex-1 flex-col justify-start relative text-left gap-y-5">
+                  <div
+                    class="flex items-center justify-center absolute z-10 max-[768px]:left-[-60px] md:right-[-108px] top-[-4px] md:top-[-10px] w-[40px] h-[40px] md:w-[56px] md:h-[56px] rounded-full bg-white text-[#0F4F81] border border-[#0F4F81] text-[24px] md:text-[32px] font-[500]"
+                  >
+                    01
+                  </div>
+                  <h5 class="text-2xl sm:text-3xl font-[500]">1990-Elvron v.1</h5>
+                  <img loading="lazy" class="md:hidden block" src="images/hist1.png" alt="alur 6 image" />
+                  <p class="text-base sm:text-xl font-[400]">
+                    Sebuah langkah berani menuju menciptakan solusi revolusioner yang akan mengubah wajah teknologi. Pada tahun ini, Elvron lahir dengan tekad menjadi pelopor inovasi yang menggiring masa depan.
+                  </p>
+                </div>
+                <div class="md:block flex-1 hidden">
+                  <img loading="lazy" class="max-h-[320px] mt-[-40px]" src="images/hist1.png" alt="alur 6 image" />
+                </div>
+              </div>
+              <div class="flex gap-x-10 md:gap-x-[160px]">
+                <div class="md:block flex-1 hidden">
+                  <img loading="lazy" class="img-dropshadow mt-[-40px]" src="images/hist24.png" alt="alur 7 image" />
+                </div>
+                <div class="flex flex-1 flex-col justify-start relative text-left gap-y-5">
+                  <div
+                    class="flex items-center justify-center absolute z-10 max-[768px]:left-[-60px] md:left-[-110px] top-[-4px] md:top-[-10px] w-[40px] h-[40px] md:w-[56px] md:h-[56px] rounded-full bg-white text-[#0F4F81] border border-[#0F4F81] text-[24px] md:text-[32px] font-[500]"
+                  >
+                    02
+                  </div>
+                  <h5 class="text-2xl sm:text-3xl font-[500]">1995-Produk pertama</h5>
+                  <img loading="lazy" class="md:hidden block img-dropshadow" src="images/hist24.png" alt="alur 7 image" />
+                  <p class="text-base sm:text-xl font-[400]">Prestasi signifikan sebagai produk pertama Elvron melihat cahaya, menandai awal dari warisan kualitas dan keunggulan yang membangun reputasi yang kuat di pasar.</p>
+                </div>
+              </div>
+              <div class="flex gap-x-10 md:gap-x-[160px]">
+                <div class="flex flex-1 flex-col justify-start relative text-left gap-y-5">
+                  <div
+                    class="flex items-center justify-center absolute z-10 max-[768px]:left-[-60px] md:right-[-108px] top-[-4px] md:top-[-10px] w-[40px] h-[40px] md:w-[56px] md:h-[56px] rounded-full bg-white text-[#0F4F81] border border-[#0F4F81] text-[24px] md:text-[32px] font-[500]"
+                  >
+                    03
+                  </div>
+                  <h5 class="text-2xl sm:text-3xl font-[500]">2000-Nasional Startup</h5>
+                  <img loading="lazy" class="md:hidden block img-dropshadow" src="images/hist3.png" alt="alur 8 image" />
+                  <p class="text-base sm:text-xl font-[400]">Membuka babak baru dalam perjalanan Elvron, ekspansi internasional memperluas cakupan pengaruh, memberikan dampak positif pada komunitas global.</p>
+                </div>
+                <div class="md:block flex-1 hidden">
+                  <img loading="lazy" class="img-dropshadow mt-[-40px]" src="images/hist3.png" alt="alur 8 image" />
+                </div>
+              </div>
+              <div class="flex gap-x-10 md:gap-x-[160px]">
+                <div class="md:block flex-1 hidden">
+                  <img loading="lazy" class="img-dropshadow mt-[-40px]" src="images/hist24.png" alt="alur 9 image" />
+                </div>
+                <div class="flex flex-1 flex-col justify-start relative text-left gap-y-5">
+                  <div
+                    class="flex items-center justify-center absolute z-10 max-[768px]:left-[-60px] md:left-[-108px] top-[-4px] md:top-[-10px] w-[40px] h-[40px] md:w-[56px] md:h-[56px] rounded-full bg-white text-[#0F4F81] border border-[#0F4F81] text-[24px] md:text-[32px] font-[500]"
+                  >
+                    04
+                  </div>
+                  <h5 class="text-2xl sm:text-3xl font-[500]">2010-Seri Produk</h5>
+                  <img loading="lazy" class="md:hidden block img-dropshadow" src="images/hist24.png" alt="alur 9 image" />
+                  <p class="text-base sm:text-xl font-[400]">Inovasi terus-menerus dengan peluncuran serangkaian produk baru, memperbarui standar industri dan membuka peluang baru bagi pelanggan Elvron.</p>
+                </div>
+              </div>
+              <div class="flex gap-x-10 md:gap-x-[160px]">
+                <div class="flex flex-1 flex-col justify-start relative text-left gap-y-5">
+                  <div
+                    class="flex items-center justify-center absolute z-10 max-[768px]:left-[-60px] md:right-[-110px] top-[-4px] md:top-[-10px] w-[40px] h-[40px] md:w-[56px] md:h-[56px] rounded-full bg-white text-[#0F4F81] border border-[#0F4F81] text-[24px] md:text-[32px] font-[500]"
+                  >
+                    05
+                  </div>
+                  <h5 class="text-2xl sm:text-3xl font-[500]">2020-Kemitraan</h5>
+                  <img loading="lazy" class="md:hidden block img-dropshadow" src="images/hist5.png" alt="alur 10 image" />
+                  <p class="text-base sm:text-xl font-[400]">Pencapaian kolaboratif dengan mitra strategis menggambarkan peran Elvron dalam membangun koneksi yang kuat dan memperluas dampaknya di seluruh dunia.</p>
+                </div>
+                <div class="md:block flex-1 hidden">
+                  <img loading="lazy" class="img-dropshadow mt-[-40px]" src="images/hist5.png" alt="alur 10 image" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="flex flex-col md:flex-row md:gap-[20px]">
-        <div class="flex flex-col text-center items-center justify-center">
-          <img src="images/team1.png" class="w-[95%] md:w-[260px] h-auto" alt="" />
-          <p class="text-[18px] font-bold my-[5px]">Shafana Intan</p>
-          <p class="text-[16px] mb-[10px]">Chief Operational Officer</p>
-          <p class="text-[15px]">Melewati tantangan, dan tumbuh dengan pengalaman. Mengukir jalan menuju kesuksesan, saya mengejar impian dan meraih pencapaian dalam perjalanan karir dalam bidang yang saya inginkan</p>
-        </div>
-        <div class="flex flex-col text-center items-center justify-center">
-          <img src="images/team2.png" class="w-[95%] md:w-[260px] h-auto" alt="" />
-          <p class="text-[18px] font-bold my-[5px]">Shafana Intan</p>
-          <p class="text-[16px] mb-[10px]">Chief Operational Officer</p>
-          <p class="text-[15px]">Melewati tantangan, dan tumbuh dengan pengalaman. Mengukir jalan menuju kesuksesan, saya mengejar impian dan meraih pencapaian dalam perjalanan karir dalam bidang yang saya inginkan</p>
-        </div>
-        <div class="flex flex-col text-center items-center justify-center">
-          <img src="images/team3.png" class="w-[95%] md:w-[260px] h-auto" alt="" />
-          <p class="text-[18px] font-bold my-[5px]">Shafana Intan</p>
-          <p class="text-[16px] mb-[10px]">Chief Operational Officer</p>
-          <p class="text-[15px]">Melewati tantangan, dan tumbuh dengan pengalaman. Mengukir jalan menuju kesuksesan, saya mengejar impian dan meraih pencapaian dalam perjalanan karir dalam bidang yang saya inginkan</p>
-        </div>
-        <div class="flex flex-col text-center items-center justify-center">
-          <img src="images/team4.png" class="w-[95%] md:w-[260px] h-auto" alt="" />
-          <p class="text-[18px] font-bold my-[5px]">Shafana Intan</p>
-          <p class="text-[16px] mb-[10px]">Chief Operational Officer</p>
-          <p class="text-[15px]">Melewati tantangan, dan tumbuh dengan pengalaman. Mengukir jalan menuju kesuksesan, saya mengejar impian dan meraih pencapaian dalam perjalanan karir dalam bidang yang saya inginkan</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Team Section End -->
+    </section>
+    <!-- History Content End -->
 
     <!-- Footer Section Start -->
 
