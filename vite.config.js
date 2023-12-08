@@ -15,6 +15,7 @@ export default defineConfig({
         our_team: resolve(__dirname, "our-team.html"),
         news: resolve(__dirname, "news.html"),
         history: resolve(__dirname, "history.html"),
+        port_hisoc: resolve(__dirname, "portfolio-hisoc.html"),
       },
     },
   },
