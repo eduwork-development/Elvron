@@ -26,9 +26,15 @@
               <a href="/our-team.html" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">Team<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span></a>
             </div>
             <div class="flex">
-              <a href="/portfolio-hisoc.html" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]"
-                >Portfolio<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span
-              ></a>
+              <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" aria-expanded="false" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">
+                <div class="flex items-center">
+                  <p>Portfolio</p>
+                  <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                  </svg>
+                </div>
+                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span>
+              </button>
             </div>
             <div class="flex">
               <a href="/news.html" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">News<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span></a>
@@ -64,10 +70,103 @@
                 <a href="/our-team.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">Team</a>
               </li>
               <li>
-                <a href="/portfolio-hisoc.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">Portfolio</a>
+                <div
+                  x-data="{
+                           open: false,
+                           toggle() {
+                                 if (this.open) {
+                                    return this.close()
+                                 }
+               
+                                 this.$refs.button.focus()
+               
+                                 this.open = true
+                           },
+                           close(focusAfter) {
+                                 if (! this.open) return
+               
+                                 this.open = false
+               
+                                 focusAfter &amp;&amp; focusAfter.focus()
+                           }
+                        }"
+                  x-on:keydown.escape.prevent.stop="close($refs.button)"
+                  x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()"
+                  x-id="['dropdown-button']"
+                >
+                  <button
+                    x-ref="button"
+                    x-on:click="toggle()"
+                    :aria-expanded="open"
+                    :aria-controls="$id('dropdown-button')"
+                    type="button"
+                    class="text-base text-gray-900 font-[300] text-primary lg:text-sm lg:font-[500] flex items-center justify-between w-full py-2 pl-3 pr-4 rounded hover:bg-gray-100 lg:hover:bg-white lg:border-0 lg:p-0 lg:w-auto"
+                    aria-expanded="false"
+                    aria-controls="dropdown-button-3"
+                  >
+                    Portfolio
+                    <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                  </button>
+                  <div
+                    x-ref="panel"
+                    x-show="open"
+                    x-transition.origin.top.left=""
+                    x-on:click.outside="close($refs.button)"
+                    :id="$id('dropdown-button')"
+                    style="display: none"
+                    class="relative lg:absolute left-0 mt-[25px] w-full lg:w-40 rounded-md bg-white shadow-none lg:shadow-s2"
+                    id="dropdown-button-3"
+                  >
+                    <a href="#" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">Eduwork</a>
+                    <a href="#" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">HiSocial Digital</a>
+                    <a href="#" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">Upscale</a>
+                    <a href="#" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">SISKO</a>
+                    <a href="#" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">MyDoit</a>
+                  </div>
+                </div>
               </li>
               <li>
                 <a href="/news.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">News</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="mega-menu-full-dropdown" class="hidden mb-[20px] max-w-[1100px] mx-auto mt-1 rounded-[20px] md:bg-black">
+          <div class="grid max-w-[1100px] px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
+            <ul class="text-white">
+              <li>
+                <a href="#" class="block p-3 rounded-lg hover:text-black hover:bg-gray-100">
+                  <div class="font-semibold">Eduwork</div>
+                  <span class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, saepe.</span>
+                </a>
+              </li>
+              <li>
+                <a href="/portfolio-hisoc.html" class="block p-3 rounded-lg hover:text-black hover:bg-gray-100">
+                  <div class="font-semibold">HiSocial Digital</div>
+                  <span class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dolor.</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="block p-3 rounded-lg hover:text-black hover:bg-gray-100">
+                  <div class="font-semibold">Upscale</div>
+                  <span class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dolor.</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="text-white">
+              <li>
+                <a href="#" class="block p-3 rounded-lg hover:text-black hover:bg-gray-100">
+                  <div class="font-semibold">SISKO</div>
+                  <span class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dolor.</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="block p-3 rounded-lg hover:text-black hover:bg-gray-100">
+                  <div class="font-semibold">MyDoit</div>
+                  <span class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dolor.</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -590,6 +689,7 @@
     <!-- Footer Section End -->
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="./main.js" type="module"></script>
   <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
   <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
