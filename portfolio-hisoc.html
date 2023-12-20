@@ -537,18 +537,110 @@
     <!-- Footer Section End -->
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="./main.js" type="module"></script>
   <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
   <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
-  <script>
-    const selectElement = document.querySelector("#underline_select");
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    selectElement.addEventListener("change", function () {
-      const selectedOption = this.selectedOptions[0];
-      const url = selectedOption.dataset.url; // Akses `data-url` menggunakan `dataset.url`
-      if (url) {
-        window.location.href = url;
-      }
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      rewind: true,
+      navigation: {
+        nextEl: ".prev",
+        prevEl: ".next",
+      },
     });
+  </script>
+  <script>
+    const eduworkhover = document.getElementById("eduworkhover");
+    const hisochover = document.getElementById("hisochover");
+    const upscalehover = document.getElementById("upscalehover");
+    const siskohover = document.getElementById("siskohover");
+    const mydoithover = document.getElementById("mydoithover");
+
+    const defaulthoverkonten = document.getElementById("defaulthoverkonten");
+    const eduworkhoverkonten = document.getElementById("eduworkhoverkonten");
+    const hisochoverkonten = document.getElementById("hisochoverkonten");
+    const upscalehoverkonten = document.getElementById("upscalehoverkonten");
+    const siskohoverkonten = document.getElementById("siskohoverkonten");
+    const mydoithoverkonten = document.getElementById("mydoithoverkonten");
+
+    eduworkhover.addEventListener("mouseover", function () {
+      eduworkhoverkonten.classList.remove("hidden");
+      defaulthoverkonten.classList.remove("flex");
+      defaulthoverkonten.classList.add("hidden");
+      hisochoverkonten.classList.add("hidden");
+      upscalehoverkonten.classList.add("hidden");
+      siskohoverkonten.classList.add("hidden");
+      mydoithoverkonten.classList.add("hidden");
+    });
+    // eduworkhover.addEventListener("mouseout", function () {
+    //   eduworkhoverkonten.classList.add("hidden");
+    //   defaulthoverkonten.classList.add("flex");
+    //   defaulthoverkonten.classList.remove("hidden");
+    // });
+
+    hisochover.addEventListener("mouseover", function () {
+      hisochoverkonten.classList.remove("hidden");
+      defaulthoverkonten.classList.remove("flex");
+      defaulthoverkonten.classList.add("hidden");
+      eduworkhoverkonten.classList.add("hidden");
+      upscalehoverkonten.classList.add("hidden");
+      siskohoverkonten.classList.add("hidden");
+      mydoithoverkonten.classList.add("hidden");
+    });
+    // hisochover.addEventListener("mouseout", function () {
+    //   hisochoverkonten.classList.add("hidden");
+    //   defaulthoverkonten.classList.add("flex");
+    //   defaulthoverkonten.classList.remove("hidden");
+    // });
+
+    upscalehover.addEventListener("mouseover", function () {
+      upscalehoverkonten.classList.remove("hidden");
+      defaulthoverkonten.classList.remove("flex");
+      defaulthoverkonten.classList.add("hidden");
+      eduworkhoverkonten.classList.add("hidden");
+      hisochoverkonten.classList.add("hidden");
+      siskohoverkonten.classList.add("hidden");
+      mydoithoverkonten.classList.add("hidden");
+    });
+    // upscalehover.addEventListener("mouseout", function () {
+    //   upscalehoverkonten.classList.add("hidden");
+    //   defaulthoverkonten.classList.add("flex");
+    //   defaulthoverkonten.classList.remove("hidden");
+    // });
+
+    siskohover.addEventListener("mouseover", function () {
+      siskohoverkonten.classList.remove("hidden");
+      defaulthoverkonten.classList.remove("flex");
+      defaulthoverkonten.classList.add("hidden");
+      eduworkhoverkonten.classList.add("hidden");
+      upscalehoverkonten.classList.add("hidden");
+      hisochoverkonten.classList.add("hidden");
+      mydoithoverkonten.classList.add("hidden");
+    });
+    // siskohover.addEventListener("mouseout", function () {
+    //   siskohoverkonten.classList.add("hidden");
+    //   defaulthoverkonten.classList.add("flex");
+    //   defaulthoverkonten.classList.remove("hidden");
+    // });
+
+    mydoithover.addEventListener("mouseover", function () {
+      mydoithoverkonten.classList.remove("hidden");
+      defaulthoverkonten.classList.remove("flex");
+      defaulthoverkonten.classList.add("hidden");
+      eduworkhoverkonten.classList.add("hidden");
+      upscalehoverkonten.classList.add("hidden");
+      siskohoverkonten.classList.add("hidden");
+      hisochoverkonten.classList.add("hidden");
+    });
+    // mydoithover.addEventListener("mouseout", function () {
+    //   mydoithoverkonten.classList.add("hidden");
+    //   defaulthoverkonten.classList.add("flex");
+    //   defaulthoverkonten.classList.remove("hidden");
+    // });
   </script>
 </html>
