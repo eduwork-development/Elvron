@@ -71,24 +71,24 @@
               <li>
                 <div
                   x-data="{
-                         open: false,
-                         toggle() {
-                               if (this.open) {
-                                  return this.close()
-                               }
-             
-                               this.$refs.button.focus()
-             
-                               this.open = true
-                         },
-                         close(focusAfter) {
-                               if (! this.open) return
-             
-                               this.open = false
-             
-                               focusAfter &amp;&amp; focusAfter.focus()
-                         }
-                      }"
+                       open: false,
+                       toggle() {
+                             if (this.open) {
+                                return this.close()
+                             }
+           
+                             this.$refs.button.focus()
+           
+                             this.open = true
+                       },
+                       close(focusAfter) {
+                             if (! this.open) return
+           
+                             this.open = false
+           
+                             focusAfter &amp;&amp; focusAfter.focus()
+                       }
+                    }"
                   x-on:keydown.escape.prevent.stop="close($refs.button)"
                   x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()"
                   x-id="['dropdown-button']"
@@ -118,11 +118,21 @@
                     class="relative lg:absolute left-0 mt-[25px] w-full lg:w-40 rounded-md bg-white shadow-none lg:shadow-s2"
                     id="dropdown-button-3"
                   >
-                    <a href="#" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">Eduwork</a>
-                    <a href="#" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">HiSocial Digital</a>
-                    <a href="#" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">Upscale</a>
-                    <a href="#" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">SISKO</a>
-                    <a href="#" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">MyDoit</a>
+                    <a href="/portfolio-eduwork.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                      >Eduwork</a
+                    >
+                    <a href="/portfolio-hisoc.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                      >HiSocial Digital</a
+                    >
+                    <a href="/portfolio-upscale.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                      >Upscale</a
+                    >
+                    <a href="/portfolio-sisko.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                      >SISKO</a
+                    >
+                    <a href="/portfolio-mydoit.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                      >MyDoit</a
+                    >
                   </div>
                 </div>
               </li>
@@ -132,74 +142,253 @@
             </ul>
           </div>
         </div>
-        <div id="mega-menu-full-dropdown" class="hidden mb-[20px] max-w-[1100px] mx-auto mt-1 rounded-[20px] md:bg-black">
-          <div class="grid max-w-[1100px] px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:px-6">
-            <ul class="text-white w-[90%]">
-              <li>
-                <a href="#" id="eduworkhover" class="block p-3 rounded-lg hover:text-black hover:bg-gray-100">
-                  <div class="font-semibold">Eduwork</div>
-                  <span class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, saepe.</span>
-                </a>
-              </li>
-              <li>
-                <a href="/portfolio-hisoc.html" id="hisochover" class="block p-3 rounded-lg hover:text-black hover:bg-gray-100">
-                  <div class="font-semibold">HiSocial Digital</div>
-                  <span class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dolor.</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" id="upscalehover" class="block p-3 rounded-lg hover:text-black hover:bg-gray-100">
-                  <div class="font-semibold">Upscale</div>
-                  <span class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dolor.</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" id="siskohover" class="block p-3 rounded-lg hover:text-black hover:bg-gray-100">
-                  <div class="font-semibold">SISKO</div>
-                  <span class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dolor.</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" id="mydoithover" class="block p-3 rounded-lg hover:text-black hover:bg-gray-100">
-                  <div class="font-semibold">MyDoit</div>
-                  <span class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dolor.</span>
-                </a>
-              </li>
-            </ul>
-            <div id="defaulthoverkonten" class="flex">
-              <div class="text-white">
-                <p>EDUWORK</p>
-                <a href="">Cek Selengkapnya</a>
-              </div>
+        <div id="mega-menu-full-dropdown" class="hidden mb-[20px] max-w-[1100px] mx-auto mt-1 rounded-[20px] md:bg-white">
+          <div class="flex flex-row max-w-[1100px] px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:px-6">
+            <div class="w-[42%]">
+              <ul class="text-black">
+                <li>
+                  <a href="/portfolio-eduwork.html" id="eduworkhover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
+                    <div class="flex flex-row items-center gap-[15px]">
+                      <img src="images/logo/eduworkpic.png" alt="" class="w-auto h-[30px]" />
+
+                      <div>
+                        <p class="font-[500]">Eduwork</p>
+                        <p class="font-[400] text-[12px]">Platform e-learning terdepan di Indonesia, menawarkan layanan pembelajaran online terbaik.</p>
+                      </div>
+                    </div>
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                        <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/portfolio-hisoc.html" id="hisochover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
+                    <div class="flex flex-row items-center gap-[20px]">
+                      <img src="images/logo/hisocpic.png" alt="" class="w-auto h-[30px]" />
+
+                      <div>
+                        <p class="font-[500]">HiSocial Digital</p>
+                        <p class="font-[400] text-[12px]">Perusahaan Pemasaran dan Desain Kreatif yang berkomitmen pada Pengalaman Produk Terbaik</p>
+                      </div>
+                    </div>
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                        <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/portfolio-upscale.html" id="upscalehover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
+                    <div class="flex flex-row items-center gap-[20px]">
+                      <img src="images/logo/upsaclepic.png" alt="" class="w-auto h-[20px]" />
+
+                      <div>
+                        <p class="font-[500]">Upscale</p>
+                        <p class="font-[400] text-[12px]">Solusi Lengkap Rekrutmen Talent untuk Pengembangan Bisnis, Dengan Akses ke Jaringan Eksklusif untuk Pilihan Terbaik</p>
+                      </div>
+                    </div>
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                        <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/portfolio-sisko.html" id="siskohover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
+                    <div class="flex flex-row items-center gap-[20px]">
+                      <img src="images/logo/siskopic.png" alt="" class="w-auto h-[30px]" />
+
+                      <div>
+                        <p class="font-[500]">SISKO</p>
+                        <p class="font-[400] text-[12px]">Layanan untuk mengoptimalkan performa toko, baik online maupun offline, dengan teknologi modern.</p>
+                      </div>
+                    </div>
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                        <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/portfolio-mydoit.html" id="mydoithover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
+                    <div class="flex flex-row items-center gap-[20px]">
+                      <img src="images/logo/mydoitpic.png" alt="" class="w-auto h-[30px]" />
+
+                      <div>
+                        <p class="font-[500]">MyDoit</p>
+                        <p class="font-[400] text-[12px]">Aplikasi Finansial Inovatif untuk Pengelolaan Keuangan Pribadi dan Bisnis, dengan Fitur Lengkap, dan Kontrol Keuangan yang Mudah.</p>
+                      </div>
+                    </div>
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                        <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div id="eduworkhoverkonten" class="hidden">
-              <div class="text-white">
-                <p>EDUWORK</p>
-                <a href="">Cek Selengkapnya</a>
+            <div class="w-[58%] m-auto">
+              <div id="defaulthoverkonten" class="flex">
+                <div class="flex flex-row">
+                  <div class="w-1/2">
+                    <img src="images/eduworknav.png" alt="" class="h-full w-auto" />
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-[15px]">
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
+                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <a
+                      href="/portfolio-eduwork.html"
+                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                      >Selengkapnya</a
+                    >
+                  </div>
+                </div>
               </div>
-            </div>
-            <div id="hisochoverkonten" class="hidden">
-              <div class="text-white">
-                <p>HiSocial Digital</p>
-                <a href="">Cek Selengkapnya</a>
+              <div id="eduworkhoverkonten" class="hidden">
+                <div class="flex flex-row">
+                  <div class="w-1/2">
+                    <img src="images/eduworknav.png" alt="" class="h-full w-auto" />
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-[15px]">
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
+                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <a
+                      href="/portfolio-eduwork.html"
+                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                      >Selengkapnya</a
+                    >
+                  </div>
+                </div>
               </div>
-            </div>
-            <div id="upscalehoverkonten" class="hidden">
-              <div class="text-white">
-                <p>Upscale</p>
-                <a href="">Cek Selengkapnya</a>
+              <div id="hisochoverkonten" class="hidden">
+                <div class="flex flex-row">
+                  <div class="w-1/2">
+                    <img src="images/hisocnav.png" alt="" class="h-full w-auto" />
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-[15px]">
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
+                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <a
+                      href="/portfolio-hisoc.html"
+                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                      >Selengkapnya</a
+                    >
+                  </div>
+                </div>
               </div>
-            </div>
-            <div id="siskohoverkonten" class="hidden">
-              <div class="text-white">
-                <p>SISKO</p>
-                <a href="">Cek Selengkapnya</a>
+              <div id="upscalehoverkonten" class="hidden">
+                <div class="flex flex-row">
+                  <div class="w-1/2">
+                    <img src="images/hisocnav.png" alt="" class="h-full w-auto" />
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-[15px]">
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
+                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <a
+                      href="/portfolio-upscale.html"
+                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                      >Selengkapnya</a
+                    >
+                  </div>
+                </div>
               </div>
-            </div>
-            <div id="mydoithoverkonten" class="hidden">
-              <div class="text-white">
-                <p>MyDoit</p>
-                <a href="">Cek Selengkapnya</a>
+              <div id="siskohoverkonten" class="hidden">
+                <div class="flex flex-row">
+                  <div class="w-1/2">
+                    <img src="images/siskonav.png" alt="" class="h-full w-auto" />
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-[15px]">
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
+                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <a
+                      href="/portfolio-sisko.html"
+                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                      >Selengkapnya</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div id="mydoithoverkonten" class="hidden">
+                <div class="flex flex-row">
+                  <div class="w-1/2">
+                    <img src="images/mydoitnav.png" alt="" class="h-full w-auto" />
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-[15px]">
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
+                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <div>
+                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    </div>
+                    <a
+                      href="/portfolio-mydoit.html"
+                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                      >Selengkapnya</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>

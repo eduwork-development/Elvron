@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body class="font-roboto">
     <!-- NavBar Start -->
@@ -72,24 +71,24 @@
               <li>
                 <div
                   x-data="{
-                         open: false,
-                         toggle() {
-                               if (this.open) {
-                                  return this.close()
-                               }
-             
-                               this.$refs.button.focus()
-             
-                               this.open = true
-                         },
-                         close(focusAfter) {
-                               if (! this.open) return
-             
-                               this.open = false
-             
-                               focusAfter &amp;&amp; focusAfter.focus()
-                         }
-                      }"
+                       open: false,
+                       toggle() {
+                             if (this.open) {
+                                return this.close()
+                             }
+           
+                             this.$refs.button.focus()
+           
+                             this.open = true
+                       },
+                       close(focusAfter) {
+                             if (! this.open) return
+           
+                             this.open = false
+           
+                             focusAfter &amp;&amp; focusAfter.focus()
+                       }
+                    }"
                   x-on:keydown.escape.prevent.stop="close($refs.button)"
                   x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()"
                   x-id="['dropdown-button']"
@@ -399,391 +398,340 @@
     <!-- NavBar End -->
 
     <!-- Hero Section Start -->
-    <div class="bg-black h-[600px] md:h-[700px]">
-      <div
-        class="container mx-auto h-[600px] md:h-[700px] text-white lg:max-w-[1100px] w-[95%] flex flex-col lg:gap-0 gap-[20px] lg:flex-row lg:justify-between justify-center items-center lg:items-center"
-        style="background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5461834391959909) 62%, rgba(0, 0, 0, 0.48175766888786764) 72%, rgba(0, 0, 0, 1) 100%), url('/images/bg-homehero.png')"
-      >
-        <div class="flex flex-col text-white w-full md:w-1/2 gap-[20px] md:gap-[60px] md:ml-[20px]">
-          <div>
-            <p class="md:text-[30px] text-[26px] font-[800]">Investasi untuk Masa Depan</p>
-          </div>
-          <div class="md:w-[550px] font-[400] md:text-[19px]">
-            <p>
-              PT Talenta Sinergi Grup adalah perusahaan holding company yang berfokus pada investment tech industry, kami memiliki beberapa anak perusahaan. Perusahaan sudah berdiri sejak 2018 dan dipimpin oleh beberapa pemegang saham yang
-              telah berpegalaman dan ahli di bidangnya.
-            </p>
-          </div>
-          <div class="flex flex-col gap-[12px]">
-            <div class="flex flex-row gap-[12px]">
-              <img src="images/logo-eduwork.png" class="h-5" alt="" />
-              <img src="images/logo-upscale.png" class="h-5" alt="" />
-              <img src="images/logo-sisko.png" class="h-5" alt="" />
-            </div>
-            <div class="flex flex-row gap-[12px]">
-              <img src="images/logo-hisoc.png" class="h-7" alt="" />
-              <img src="images/logo-doit.png" class="h-6" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="hidden md:flex items-end justify-end">
-          <img src="images/homehero.png" class="h-[540px] w-auto" alt="" />
-        </div>
+    <div
+      class="h-[600px] md:h-[600px]"
+      style="
+        background: linear-gradient(279deg, rgba(0, 0, 0, 0.75) 2.22%, rgba(72, 69, 69, 0.59) 60.85%, rgba(161, 157, 157, 0) 95.53%), linear-gradient(86deg, rgba(0, 0, 0, 0.68) 28.42%, rgba(0, 0, 0, 0.5) 64.57%, rgba(0, 0, 0, 0) 88.42%),
+          url('./images/portfolio-bg.png') no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="container mx-auto h-[600px] md:h-[600px] text-white lg:max-w-[1000px] w-[95%] flex flex-col lg:gap-0 gap-[20px] text-center justify-center items-center lg:items-center">
+        <p class="text-[50px] font-[600]">Our Portfolio</p>
+        <p class="text-[22px] font-[400]">Portofolio menampilkan rangkaian proyek desain yang mencakup antarmuka pengguna yang intuitif, visual yang menarik, dan solusi. pengguna visual</p>
       </div>
     </div>
     <!-- Hero Section End -->
 
-    <!-- Visi Misi Section -->
-    <div class="font-poppins container mx-auto text-black lg:max-w-[1070px] py-[20px] w-[95%] flex flex-col lg:gap-0 gap-[20px] lg:flex-row lg:justify-between justify-center items-center lg:items-center">
-      <div class="flex flex-col md:flex-row md:justify-between">
-        <div class="flex flex-col md:w-[200px] md:gap-[2px] md:mb-0 mb-[30px]">
-          <p class="text-[14px] font-[300] md:mb-[15px]">Visi Misi Kami</p>
-          <p class="font-[500] md:w-[200px]">Menciptakan sebuah dunia di mana teknologi dan inovasi mengubah kehidupan sehari-hari.</p>
+    <!-- Portfolio Content Start -->
+    <div class="container mx-auto md:max-w-[1014px] w-full flex flex-col md:mt-[60px]">
+      <div class="flex md:flex-row flex-col justify-between w-[95%] md:w-full mx-auto">
+        <div class="p-[10px]">
+          <a href="/portfolio-eduwork.html" class="md:text-[24px] font-[600] group transition duration-300">Eduwork <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span></a>
         </div>
-        <div class="flex flex-col md:w-full w-[97%] mx-auto md:flex-row gap-[10px] md:relative md:mt-[-95px] md:ml-[30px]">
-          <div
-            class="flex flex-col items-center justify-center md:items-start md:justify-start text-white gap-[15px] mx-auto px-[12px] py-[14px]"
-            style="background: rgb(54, 60, 73); background: linear-gradient(34deg, rgba(54, 60, 73, 1) 0%, rgba(97, 99, 109, 1) 46%, rgba(97, 99, 109, 1) 57%, rgba(85, 88, 98, 1) 66%, rgba(54, 60, 73, 1) 100%)"
-          >
-            <img src="images/vm1.png" alt="" />
-            <p class="font-[600] text-[15px]">Berkelanjutan Karya</p>
-            <p class="font-[500] text-[12px] md:text-start text-center">Lembaga pengelola dana bertaraf nasional guna menyiapkan bibit generasi unggul</p>
-          </div>
-          <div
-            class="flex flex-col items-center justify-center md:items-start md:justify-start text-white gap-[15px] mx-auto px-[12px] py-[14px]"
-            style="background: rgb(54, 60, 73); background: linear-gradient(34deg, rgba(54, 60, 73, 1) 0%, rgba(97, 99, 109, 1) 46%, rgba(97, 99, 109, 1) 57%, rgba(85, 88, 98, 1) 66%, rgba(54, 60, 73, 1) 100%)"
-          >
-            <img src="images/vm2.png" alt="" />
-            <p class="font-[600] text-[15px]">Sponsor Beasiswa</p>
-            <p class="font-[500] text-[12px] md:text-start text-center">Lembaga pengelola dana bertaraf nasional guna menyiapkan bibit generasi unggul</p>
-          </div>
-          <div
-            class="flex flex-col items-center justify-center md:items-start md:justify-start text-white gap-[15px] mx-auto px-[12px] py-[14px]"
-            style="background: rgb(54, 60, 73); background: linear-gradient(34deg, rgba(54, 60, 73, 1) 0%, rgba(97, 99, 109, 1) 46%, rgba(97, 99, 109, 1) 57%, rgba(85, 88, 98, 1) 66%, rgba(54, 60, 73, 1) 100%)"
-          >
-            <img src="images/vm3.png" alt="" />
-            <p class="font-[600] text-[15px]">Generasi Emas</p>
-            <p class="font-[500] text-[12px] md:text-start text-center">Lembaga pengelola dana bertaraf nasional guna menyiapkan bibit generasi unggul</p>
-          </div>
-          <div
-            class="flex flex-col items-center justify-center md:items-start md:justify-start text-white gap-[15px] mx-auto px-[12px] py-[14px]"
-            style="background: rgb(54, 60, 73); background: linear-gradient(34deg, rgba(54, 60, 73, 1) 0%, rgba(97, 99, 109, 1) 46%, rgba(97, 99, 109, 1) 57%, rgba(85, 88, 98, 1) 66%, rgba(54, 60, 73, 1) 100%)"
-          >
-            <img src="images/vm4.png" alt="" />
-            <p class="font-[600] text-[15px]">Generasi Emas</p>
-            <p class="font-[500] text-[12px] md:text-start text-center">Lembaga pengelola dana bertaraf nasional guna menyiapkan bibit generasi unggul</p>
-          </div>
+        <div class="p-[10px]">
+          <a href="/portfolio-hisoc.html" class="md:text-[24px] font-[600] group transition duration-300">HiSocial Digital<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span></a>
+        </div>
+
+        <div class="border-[3px] border-black p-[10px] py-[10px] md:px-[50px]"><a href="" class="md:text-[24px] font-[600]">Upscale</a></div>
+        <div class="p-[10px]">
+          <a href="/portfolio-sisko.html" class="md:text-[24px] font-[600] group transition duration-300">SISKO<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span></a>
+        </div>
+        <div class="p-[10px]">
+          <a href="/portfolio-mydoit.html" class="md:text-[24px] font-[600] group transition duration-300">MyDoit <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span></a>
         </div>
       </div>
-    </div>
-    <!-- Visi Misi Section End -->
 
-    <!-- Portfolio Section -->
-    <div class="bg-[#888888] h-[300px] md:h-[350px] md:mt-[50px]">
-      <div
-        class="container mx-auto h-[300px] md:h-[350px] text-white lg:max-w-[1070px] w-[95%] flex flex-col lg:gap-0 gap-[20px] lg:flex-row lg:justify-between justify-center items-center lg:items-center"
-        style="background-image: linear-gradient(90deg, rgba(136, 136, 136, 1) 0%, rgba(0, 0, 0, 0.4453431030615371) 35%, rgba(0, 0, 0, 0.47335430754332986) 84%, rgba(136, 136, 136, 1) 100%), url('/images/bg-homeportfolio.png')"
-      >
-        <div class="flex flex-col">
-          <p class="text-[30px] font-[600]">Portofolio Kami</p>
-          <p class="text-[24px] font-[400] md:mb-[30px] md:w-[400px]">Eksplorasi Kreativitas dan Prestasi Portofolio Elvron</p>
-          <a href="" class="relative md:ml-0 text-center px-[30px] py-[10px] w-full md:w-fit font-[500] text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
-            >Lihat Portofolio</a
-          >
+      <!-- <div class="flex w-[95%] md:w-full mx-auto flex-col">
+        <label for="underline_select" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Portfolio</label>
+        <select id="underline_select" class="block py-2.5 px-0 w-full text-sm md:text-[20px] text-slate-900 bg-transparent border-0 border-b-2 border-slate-950 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+          <option data-url="/portfolio-hisoc">Eduwork</option>
+          <option selected data-url="/portfolio-hisoc">HiSocial Digital</option>
+          <option data-url="/portfolio-hisoc">Upscale</option>
+          <option data-url="/portfolio-hisoc">SISKO</option>
+          <option data-url="/portfolio-hisoc">MyDoit</option>
+        </select>
+      </div> -->
+
+      <div class="flex md:flex-row flex-col w-[95%] md:w-full mx-auto items-center md:gap-[100px] md:mt-[40px] gap-[20px]">
+        <div class="flex flex-col md:w-1/2 gap-[20px] md:gap-0">
+          <p class="md:mb-[20px] text-[#707070] md:text-[28px] text-[36px] font-bold text-center md:font-normal md:text-start">About Upscale</p>
+          <p class="md:mb-[30px] md:text-[24px] font-[500] text-[23px] text-center md:text-start">Keep Growing With Forward Thinking With Us.</p>
+          <p class="text-[20px] md:text-[18px] font-[400] text-[#828282] text-justify md:leading-[150%] leading-[160%]">
+            We Are HiSocial Digital, a digital marketing and Creative design company based in Yogyakarta, Indonesia. Let's create the best product experience with our experienced members.Helping you manage your marketing budget more
+            effectively. We can tailor a marketing plan to suit your budget and ensure efficient use of funds.
+          </p>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/port-abt-1.png" alt="" class="md:w-full" />
         </div>
       </div>
-    </div>
-    <!-- Portfolio Section End -->
 
-    <!-- Filosofi Section Start -->
-    <img src="images/vector.png" class="hidden md:flex bg-repeat-x w-full h-[200px] mt-[120px] absolute" alt="" />
-    <div class="container mx-auto h-[600px] mt-[50px] md:mt-[50px] md:h-[350px] text-black lg:max-w-[1070px] w-[95%] flex flex-col lg:gap-0 gap-[20px] lg:flex-row lg:justify-between justify-center items-center lg:items-center">
-      <div class="flex md:w-1/2"><img src="images/elvron.png" class="h-[200px] md:h-[290px] w-auto" alt="" /></div>
-      <div class="flex-col md:w-1/2">
-        <div class="flex-col">
-          <div class="flex text-[24px] md:text-[26px] font-[700]"><p>01 Filosofi Daun</p></div>
-          <div class="flex flex-row items-center gap-[20px] md:mx-[20px]">
-            <div class="border border-l-black h-[120px]"></div>
-            <div class="text-[15px] md:text-[17px] font-[300]"><p>Daun melambangkan pertumbuhan, seperti daun yang tumbuh dari tunas kecil, manusia juga terus berkembang dalam perjalanan hidup mereka.</p></div>
-          </div>
-        </div>
-        <div class="flex-col">
-          <div class="flex text-[24px] md:text-[26px] font-[700]"><p>02 Filosofi Dua Daun</p></div>
-          <div class="flex flex-row items-center gap-[20px] md:mx-[20px]">
-            <div class="border border-l-black h-[120px]"></div>
-            <div class="text-[15px] md:text-[17px] font-[300]"><p>Dua daun melambangkan kebersamaan dan ketergantungan dalam kehidupan, mengajarkan bahwa kita saling mempengaruhi dan bergantung pada satu sama lain</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Filosofi Section End -->
+      <div class="flex md:flex-row flex-wrap mx-auto md:gap-[80px] gap-[30px] justify-center md:w-full w-[95%] mt-[60px]">
+        <div class="flex md:flex-row flex-col gap-[30px] md:gap-[80px]">
+          <div class="flex flex-row items-center gap-[10px]">
+            <div
+              class="flex p-[6px]"
+              style="
+                background: linear-gradient(96deg, #73787e -0.01%, #151c29 99.99%);
 
-    <!-- Team Section Start -->
-    <div
-      class="flex container mx-auto h-[600px] md:mb-0 mb-[190px] mt-[180px] md:mt-[50px] md:h-[350px] text-black lg:max-w-[1070px] w-[95%] flex-col lg:gap-0 gap-[20px] lg:flex-row lg:justify-between justify-center items-center lg:items-center"
-    >
-      <div class="flex flex-col-reverse md:flex-row items-center">
-        <div class="flex flex-col md:flex-row gap-[20px]">
-          <div class="hidden md:flex flex-col md:w-[170px]">
-            <img src="images/team3.png" class="w-full h-auto" alt="" />
-            <div class="flex flex-col justify-center items-center my-[12px] mx-[12px]">
-              <p class="text-[#303030] font-bold text-[20px]">Riska Awali</p>
-              <p class="font-[300] text-[16px]">CTO</p>
-            </div>
-          </div>
-          <div class="hidden md:flex flex-col md:w-[170px]">
-            <img src="images/team4.png" class="w-full h-auto" alt="" />
-            <div class="flex flex-col justify-center items-center my-[12px] mx-[12px]">
-              <p class="text-[#303030] font-bold text-[20px]">Ratih Jenaka</p>
-              <p class="font-[300] text-[16px]">Marketing</p>
-            </div>
-          </div>
-          <div class="flex flex-col md:w-[170px]">
-            <img src="images/team1.png" class="w-full h-auto" alt="" />
-            <div class="flex flex-col justify-center items-center my-[12px] mx-[12px]">
-              <p class="text-[#303030] font-bold text-[20px]">Bayu Ghulam</p>
-              <p class="font-[300] text-[16px]">COO</p>
-            </div>
-          </div>
-          <div class="flex flex-col md:w-[170px]">
-            <img src="images/team2.png" class="w-full h-auto" alt="" />
-            <div class="flex flex-col justify-center items-center my-[12px] mx-[12px]">
-              <p class="text-[#303030] font-bold text-[20px]">Riska Awali</p>
-              <p class="font-[300] text-[16px]">CTO</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row md:justify-between items-center w-full md:w-1/4 md:ml-[20px]">
-          <div class="flex flex-col w-full md:h-full mb-[20px] md:mb-0">
-            <div class="mb-[14px]"><p class="text-[#646464] text-[14px] font-[400]">Meet Our Team</p></div>
-            <div class="mb-[20px]"><p class="text-black text-[20px] font-[600]">Berkenalan lebih dekat dengan tim Elvron</p></div>
-            <a
-              href="/our-team.html"
-              class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
-              >Selengkapnya</a
+                backdrop-filter: blur(20px);
+              "
             >
+              <img src="images/Done.png" alt="" class="w-auto h-[40px]" />
+            </div>
+            <div class="flex flex-col leading-[160%]">
+              <p class="text-[20px] md:text-[27px] font-[500]">800+</p>
+              <p class="text-[#8e8e8e] font-[400] text-[14px] md:text-[17px]">Total project finish</p>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+          <div class="flex flex-row items-center gap-[10px]">
+            <div
+              class="flex p-[10px] h-[50px] w-[50px] items-center justify-center"
+              style="
+                background: linear-gradient(96deg, #73787e -0.01%, #151c29 99.99%);
 
-    <!-- Team Section End -->
-
-    <!-- Product Section Start -->
-    <div class="hidden container mx-auto md:mt-[150px] md:h-[350px] text-black lg:max-w-[1070px] w-[95%] md:flex flex-col lg:gap-0 gap-[20px] lg:flex-row lg:justify-between justify-center items-center lg:items-center">
-      <div class="flex flex-row">
-        <div class="flex flex-col h-[600px] justify-end items-end w-[214px] text-white p-[20px]" style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 90%), url('/images/prod1.png')">
-          <div class="flex flex-col">
-            <p class="text-[26px] font-[600] text-center">Product</p>
-            <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo dolorum velit dolorem nesciunt nam labore</p>
-          </div>
-        </div>
-        <div class="flex flex-col h-[600px] justify-end items-end w-[214px] text-white p-[20px]" style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 90%), url('/images/prod2.png')">
-          <div class="flex flex-col">
-            <p class="text-[26px] font-[600] text-center">Product</p>
-            <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo dolorum velit dolorem nesciunt nam labore</p>
-          </div>
-        </div>
-        <div class="flex flex-col h-[600px] justify-end items-end w-[214px] text-white p-[20px]" style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 90%), url('/images/prod3.png')">
-          <div class="flex flex-col">
-            <p class="text-[26px] font-[600] text-center">Product</p>
-            <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo dolorum velit dolorem nesciunt nam labore</p>
-          </div>
-        </div>
-        <div class="flex flex-col h-[600px] justify-end items-end w-[214px] text-white p-[20px]" style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 90%), url('/images/prod4.png')">
-          <div class="flex flex-col">
-            <p class="text-[26px] font-[600] text-center">Product</p>
-            <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo dolorum velit dolorem nesciunt nam labore</p>
-          </div>
-        </div>
-        <div class="flex flex-col h-[600px] justify-end items-end w-[214px] text-white p-[20px]" style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 90%), url('/images/prod5.png')">
-          <div class="flex flex-col">
-            <p class="text-[26px] font-[600] text-center">Product</p>
-            <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo dolorum velit dolorem nesciunt nam labore</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Product Section End -->
-
-    <!-- Product Mobile Responsive Start -->
-    <div class="flex md:hidden flex-col w-full justify-center items-center gap-[13px]">
-      <div
-        class="flex flex-col h-[300px] justify-end items-end w-[95%] text-white p-[14px]"
-        style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 90%), url('/images/prodm1.jpg'); background-repeat: no-repeat; background-size: cover"
-      >
-        <div class="flex flex-col">
-          <p class="text-[26px] font-[600] text-center">Product</p>
-          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo dolorum velit dolorem nesciunt nam labore</p>
-        </div>
-      </div>
-      <div
-        class="flex flex-col h-[300px] justify-end items-end w-[95%] text-white p-[14px]"
-        style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 90%), url('/images/prodm2.jpg'); background-repeat: no-repeat; background-size: cover"
-      >
-        <div class="flex flex-col">
-          <p class="text-[26px] font-[600] text-center">Product</p>
-          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo dolorum velit dolorem nesciunt nam labore</p>
-        </div>
-      </div>
-      <div
-        class="flex flex-col h-[300px] justify-end items-end w-[95%] text-white p-[14px]"
-        style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 90%), url('/images/prodm3.jpg'); background-repeat: no-repeat; background-size: cover"
-      >
-        <div class="flex flex-col">
-          <p class="text-[26px] font-[600] text-center">Product</p>
-          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo dolorum velit dolorem nesciunt nam labore</p>
-        </div>
-      </div>
-      <div
-        class="flex flex-col h-[300px] justify-end items-end w-[95%] text-white p-[14px]"
-        style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 90%), url('/images/prodm4.jpg'); background-repeat: no-repeat; background-size: cover"
-      >
-        <div class="flex flex-col">
-          <p class="text-[26px] font-[600] text-center">Product</p>
-          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo dolorum velit dolorem nesciunt nam labore</p>
-        </div>
-      </div>
-      <div
-        class="flex flex-col h-[300px] justify-end items-end w-[95%] text-white p-[14px]"
-        style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 90%), url('/images/prodm5.jpg'); background-repeat: no-repeat; background-size: cover"
-      >
-        <div class="flex flex-col">
-          <p class="text-[26px] font-[600] text-center">Product</p>
-          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo dolorum velit dolorem nesciunt nam labore</p>
-        </div>
-      </div>
-    </div>
-    <!-- Product Mobile Responsive End -->
-
-    <!-- News Section Start -->
-
-    <div class="flex flex-col md:mt-[170px] mt-[60px] container mx-auto md:h-[350px] text-black lg:max-w-[1070px] w-[95%]">
-      <div class="hidden md:flex flex-row justify-end mb-[20px]">
-        <div class="next">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 24 25" fill="none">
-            <g clip-path="url(#clip0_54_295)">
-              <path d="M13.7166 20.0586L16 17.7086L8.583 10.0586L16 2.40859L13.7166 0.0585938L4 10.0586L13.7166 20.0586Z" fill="#484848" />
-            </g>
-            <defs>
-              <clipPath id="clip0_54_295">
-                <rect x="24" y="24.1055" width="24" height="24" rx="12" transform="rotate(-180 24 24.1055)" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
-        <div class="prev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 24 25" fill="none">
-            <g clip-path="url(#clip0_54_297)">
-              <path d="M11.2834 0.0585938L9 2.40859L16.417 10.0586L9 17.7086L11.2834 20.0586L21 10.0586L11.2834 0.0585938Z" fill="#484848" />
-            </g>
-            <defs>
-              <clipPath id="clip0_54_297">
-                <rect y="0.105469" width="24" height="24" rx="12" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
-      </div>
-      <div class="flex flex-col gap-[20px] lg:flex-row items-center lg:items-center">
-        <div class="flex flex-col md:flex-row md:justify-between items-center w-full md:w-1/4">
-          <div class="flex flex-col w-full md:h-full mb-[20px] md:mb-0">
-            <div class="mb-[14px]"><p class="text-[#646464] text-[14px] font-[400]">Berita & Tampilan</p></div>
-            <div class="mb-[20px]"><p class="text-black text-[20px] font-[600]">Update berita terkini teknologi dan bisnis dengan elvron.</p></div>
-            <a
-              href="/news.html"
-              class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
-              >Selengkapnya</a
+                backdrop-filter: blur(20px);
+              "
             >
-          </div>
-        </div>
-        <div class="flex md:hidden flex-row justify-end mb-[2px] mt-[-20px]">
-          <div class="next">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 24 25" fill="none">
-              <g clip-path="url(#clip0_54_295)">
-                <path d="M13.7166 20.0586L16 17.7086L8.583 10.0586L16 2.40859L13.7166 0.0585938L4 10.0586L13.7166 20.0586Z" fill="#484848" />
-              </g>
-              <defs>
-                <clipPath id="clip0_54_295">
-                  <rect x="24" y="24.1055" width="24" height="24" rx="12" transform="rotate(-180 24 24.1055)" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-          <div class="prev">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 24 25" fill="none">
-              <g clip-path="url(#clip0_54_297)">
-                <path d="M11.2834 0.0585938L9 2.40859L16.417 10.0586L9 17.7086L11.2834 20.0586L21 10.0586L11.2834 0.0585938Z" fill="#484848" />
-              </g>
-              <defs>
-                <clipPath id="clip0_54_297">
-                  <rect y="0.105469" width="24" height="24" rx="12" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-        </div>
-        <div class="swiper mySwiper w-full md:w-3/4">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide flex flex-row gap-[10px]">
-              <div class="flex flex-col">
-                <img src="images/news1.jpg" class="md:w-[380px] w-full" alt="" />
-                <p class="text-[14px] font-[500]">Teknologi Quantum Computing: Menuju Era Komputasi Supercepat dan Lebih Efisien.</p>
-              </div>
-              <div class="flex flex-col">
-                <img src="images/news1.jpg" class="md:w-[380px] w-full" alt="" />
-                <p class="text-[14px] font-[500]">Teknologi Quantum Computing: Menuju Era Komputasi Supercepat dan Lebih Efisien.</p>
-              </div>
+              <img src="images/cart.png" alt="" class="w-auto h-[20px]" />
             </div>
-            <div class="swiper-slide flex flex-row gap-[10px]">
-              <div class="flex flex-col">
-                <img src="images/news1.jpg" class="md:w-[380px] w-full" alt="" />
-                <p class="text-[14px] font-[500]">Teknologi Quantum Computing: Menuju Era Komputasi Supercepat dan Lebih Efisien.</p>
-              </div>
-              <div class="flex flex-col">
-                <img src="images/news1.jpg" class="md:w-[380px] w-full" alt="" />
-                <p class="text-[14px] font-[500]">Teknologi Quantum Computing: Menuju Era Komputasi Supercepat dan Lebih Efisien.</p>
-              </div>
-            </div>
-            <div class="swiper-slide flex flex-row gap-[10px]">
-              <div class="flex flex-col">
-                <img src="images/news1.jpg" class="md:w-[380px] w-full" alt="" />
-                <p class="text-[14px] font-[500]">Teknologi Quantum Computing: Menuju Era Komputasi Supercepat dan Lebih Efisien.</p>
-              </div>
-              <div class="flex flex-col">
-                <img src="images/news1.jpg" class="md:w-[380px] w-full" alt="" />
-                <p class="text-[14px] font-[500]">Teknologi Quantum Computing: Menuju Era Komputasi Supercepat dan Lebih Efisien.</p>
-              </div>
+            <div class="flex flex-col leading-[160%]">
+              <p class="text-[20px] md:text-[27px] font-[500]">26</p>
+              <p class="text-[#8e8e8e] font-[400] text-[14px] md:text-[17px]">Project last month</p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- News Section Start -->
+        <div class="flex md:flex-row flex-col gap-[30px] md:gap-[80px]">
+          <div class="flex flex-row items-center gap-[10px]">
+            <div
+              class="flex p-[10px] h-[50px] w-[50px] items-center justify-center"
+              style="
+                background: linear-gradient(96deg, #73787e -0.01%, #151c29 99.99%);
 
-    <!-- History Section Start -->
-    <div class="bg-[#888888] h-[300px] md:h-[350px] md:mt-[50px] mt-[50px]">
-      <div
-        class="container mx-auto h-[300px] md:h-[350px] text-white lg:max-w-[1070px] w-[95%] flex flex-col lg:gap-0 gap-[20px] lg:flex-row lg:justify-between justify-center items-center lg:items-center"
-        style="background-image: linear-gradient(90deg, rgba(136, 136, 136, 1) 0%, rgba(0, 0, 0, 0.4453431030615371) 35%, rgba(0, 0, 0, 0.47335430754332986) 84%, rgba(136, 136, 136, 1) 100%), url('/images/bg-community.png')"
-      >
-        <div class="flex flex-col">
-          <p class="text-[30px] font-[600]">History</p>
-          <p class="text-[22px] font-[400] md:mb-[30px] md:w-[400px]">Ikuti jejak pertumbuhan Elvron sampai saat ini</p>
-          <a
-            href="/history.html"
-            class="relative md:ml-0 text-center px-[30px] py-[10px] w-full md:w-fit font-[450] text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
-            >Mari Bergabung</a
-          >
+                backdrop-filter: blur(20px);
+              "
+            >
+              <img src="images/bag.png" alt="" class="w-auto h-[20px]" />
+            </div>
+            <div class="flex flex-col leading-[160%]">
+              <p class="text-[20px] md:text-[27px] font-[500]">12</p>
+              <p class="text-[#8e8e8e] font-[400] text-[14px] md:text-[17px]">Total Services</p>
+            </div>
+          </div>
+          <div class="flex flex-row items-center gap-[10px]">
+            <div
+              class="flex p-[10px] h-[50px] w-[50px] items-center justify-center"
+              style="
+                background: linear-gradient(96deg, #73787e -0.01%, #151c29 99.99%);
+
+                backdrop-filter: blur(20px);
+              "
+            >
+              <img src="images/Happy.png" alt="" class="w-auto h-[25px]" />
+            </div>
+            <div class="flex flex-col leading-[160%]">
+              <p class="text-[20px] md:text-[27px] font-[500]">750+</p>
+              <p class="text-[#8e8e8e] font-[400] text-[14px] md:text-[17px]">Happy Customer</p>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="flex md:flex-row flex-col w-[95%] md:w-full mx-auto mt-[60px]">
+        <div class="flex md:w-1/2">
+          <img src="images/port-service-1.png" alt="" class="h-auto" />
+        </div>
+        <div class="flex flex-col md:w-1/2 md:ml-[70px] gap-[20px] md:gap-0">
+          <p class="md:mb-[20px] text-[#707070] md:text-[28px] text-[26px] text-center md:text-start font-bold md:font-normal mt-[20px] md:mt-0">Our Service</p>
+          <div class="flex flex-row justify-start gap-[20px] md:mb-[20px]">
+            <div class="flex mt-[5px]">
+              <img src="images/checklist.png" alt="" class="h-[25px] w-[50px]" />
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <p class="text-[24px] font-[500]">Increased Engagement</p>
+              <p class="text-[#828282]">We will assist in increased engagement so as to improve overall experience, motivation, learning, relationships and performance.</p>
+            </div>
+          </div>
+          <div class="flex flex-row justify-start gap-[20px] md:mb-[20px]">
+            <div class="flex mt-[5px]">
+              <img src="images/checklist.png" alt="" class="h-[25px] w-[50px]" />
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <p class="text-[24px] font-[500]">Brand Awareness</p>
+              <p class="text-[#828282]">Increase your sensitivity to brand awarnes, so you can Strengthen positive image, Increase consumer loyalty, Facilitate decision making,</p>
+            </div>
+          </div>
+          <div class="flex flex-row justify-start gap-[20px]">
+            <div class="flex mt-[5px]">
+              <img src="images/checklist.png" alt="" class="h-[25px] w-[50px]" />
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <p class="text-[24px] font-[500]">Audience Growth</p>
+              <p class="text-[#828282]">Our team will assist in the aspect of audience growth, so as to increase brand awareness, increase sales and expand the market.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col mt-[60px] mb-[30px]">
+        <p class="text-center text-[#707070] text-[27px] font-[500]">HiSocial Digital Historical Timeline</p>
+      </div>
+
+      <div class="hidden md:flex flex-row w-full border-b-[3px] border-black h-[220px]">
+        <div class="flex flex-row gap-[110px] relative left-[45.5px]">
+          <div class="flex flex-col max-w-[185px] gap-[10px] justify-center">
+            <div class="text-center"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, beatae.</p></div>
+            <div
+              class="text-white rounded-[4px] px-[2px] py-[6px] text-center text-[30px]"
+              style="
+                background: linear-gradient(96deg, #73787e -0.01%, #151c29 99.99%);
+
+                backdrop-filter: blur(20px);
+              "
+            >
+              <p>2018</p>
+            </div>
+            <div class="flex items-center mx-auto border-[2px] bg-black border-black h-[140px] mt-[-20px]"></div>
+          </div>
+          <div class="flex flex-col max-w-[185px] gap-[10px] justify-center">
+            <div class="text-center"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, beatae.</p></div>
+            <div
+              class="text-white rounded-[4px] px-[2px] py-[6px] text-center text-[30px]"
+              style="
+                background: linear-gradient(96deg, #73787e -0.01%, #151c29 99.99%);
+
+                backdrop-filter: blur(20px);
+              "
+            >
+              <p>2020</p>
+            </div>
+            <div class="flex items-center mx-auto border-[2px] bg-black border-black h-[140px] mt-[-20px]"></div>
+          </div>
+          <div class="flex flex-col max-w-[185px] gap-[10px] justify-center">
+            <div class="text-center"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, beatae.</p></div>
+            <div
+              class="text-white rounded-[4px] px-[2px] py-[6px] text-center text-[30px]"
+              style="
+                background: linear-gradient(96deg, #73787e -0.01%, #151c29 99.99%);
+
+                backdrop-filter: blur(20px);
+              "
+            >
+              <p>2022</p>
+            </div>
+            <div class="flex items-center mx-auto border-[2px] bg-black border-black h-[140px] mt-[-20px]"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden md:flex flex-row w-full border-t-[3px] border-black h-[220px]">
+        <div class="flex flex-row gap-[110px] relative left-[193.5px]">
+          <div class="flex flex-col-reverse max-w-[185px] gap-[10px] justify-center">
+            <div class="text-center"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, beatae.</p></div>
+            <div
+              class="text-white rounded-[4px] px-[2px] py-[6px] text-center text-[30px]"
+              style="
+                background: linear-gradient(96deg, #73787e -0.01%, #151c29 99.99%);
+
+                backdrop-filter: blur(20px);
+              "
+            >
+              <p>2019</p>
+            </div>
+            <div class="flex items-center mx-auto border-[2px] bg-black border-black h-[140px] mb-[-20px]"></div>
+          </div>
+          <div class="flex flex-col-reverse max-w-[185px] gap-[10px] justify-center">
+            <div class="text-center"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, beatae.</p></div>
+            <div
+              class="text-white rounded-[4px] px-[2px] py-[6px] text-center text-[30px]"
+              style="
+                background: linear-gradient(96deg, #73787e -0.01%, #151c29 99.99%);
+
+                backdrop-filter: blur(20px);
+              "
+            >
+              <p>2021</p>
+            </div>
+            <div class="flex items-center mx-auto border-[2px] bg-black border-black h-[140px] mb-[-20px]"></div>
+          </div>
+          <div class="flex flex-col-reverse max-w-[185px] gap-[10px] justify-center">
+            <div class="text-center"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, beatae.</p></div>
+            <div
+              class="text-white rounded-[4px] px-[2px] py-[6px] text-center text-[30px]"
+              style="
+                background: linear-gradient(96deg, #73787e -0.01%, #151c29 99.99%);
+
+                backdrop-filter: blur(20px);
+              "
+            >
+              <p>2023</p>
+            </div>
+            <div class="flex items-center mx-auto border-[2px] bg-black border-black h-[140px] mb-[-20px]"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:flex flex-row justify-evenly relative top-[-230px]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 32 33" fill="none">
+          <circle cx="15.8874" cy="16.3112" r="15.8717" fill="#323847" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 32 33" fill="none">
+          <circle cx="15.8874" cy="16.3112" r="15.8717" fill="#323847" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 32 33" fill="none">
+          <circle cx="15.8874" cy="16.3112" r="15.8717" fill="#323847" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 32 33" fill="none">
+          <circle cx="15.8874" cy="16.3112" r="15.8717" fill="#323847" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 32 33" fill="none">
+          <circle cx="15.8874" cy="16.3112" r="15.8717" fill="#323847" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 32 33" fill="none">
+          <circle cx="15.8874" cy="16.3112" r="15.8717" fill="#323847" />
+        </svg>
+      </div>
+
+      <!-- Mobile Timeline Start -->
+
+      <ol class="md:hidden w-[95%] mx-auto relative border-s border-black">
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white"></div>
+          <time class="text-lg font-semibold text-gray-900">2018</time>
+
+          <p class="mb-4 text-base font-normal text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat porro quidem doloremque ea! Ea labore asperiores aliquam? Nostrum, consectetur ad!</p>
+        </li>
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white"></div>
+          <time class="text-lg font-semibold text-gray-900">2019</time>
+
+          <p class="text-base font-normal text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio impedit corrupti maxime pariatur earum quam vero aut in necessitatibus dolor.</p>
+        </li>
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white"></div>
+          <time class="text-lg font-semibold text-gray-900">2020</time>
+
+          <p class="text-base font-normal text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsa tenetur commodi, ex ea voluptas velit dolores quibusdam excepturi eius.</p>
+        </li>
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white"></div>
+          <time class="text-lg font-semibold text-gray-900">2021</time>
+
+          <p class="text-base font-normal text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ab quisquam amet animi alias! Dolor, culpa molestias. Ratione, quasi esse?</p>
+        </li>
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white"></div>
+          <time class="text-lg font-semibold text-gray-900">2022</time>
+
+          <p class="text-base font-normal text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ab quisquam amet animi alias! Dolor, culpa molestias. Ratione, quasi esse?</p>
+        </li>
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white"></div>
+          <time class="text-lg font-semibold text-gray-900">2023</time>
+
+          <p class="text-base font-normal text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ab quisquam amet animi alias! Dolor, culpa molestias. Ratione, quasi esse?</p>
+        </li>
+      </ol>
+
+      <!-- Mobile Timeline End -->
     </div>
-    <!-- History Sectoin End -->
+
+    <!-- Portfolio Content End -->
 
     <!-- Footer Section Start -->
 
     <footer class="bg-white md:mt-[50px] border-t border-t-slate-300 py-[40px] mt-[50px]">
-      <div class="container mx-auto text-black lg:max-w-[1070px] w-[95%] flex flex-col lg:gap-0 gap-[20px] lg:flex-row lg:justify-between justify-center items-center lg:items-center">
+      <div class="container mx-auto text-black lg:max-w-[1000px] w-[95%] flex flex-col lg:gap-0 gap-[20px] lg:flex-row lg:justify-between justify-center items-center lg:items-center">
         <div class="flex md:flex-row flex-col w-full items-center">
           <div class="flex flex-col w-full md:w-1/3 gap-[20px]">
             <div class="flex justify-center md:justify-start">
