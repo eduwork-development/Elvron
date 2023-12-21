@@ -23,6 +23,8 @@ const upscalehoverkonten = document.getElementById("upscalehoverkonten");
 const siskohoverkonten = document.getElementById("siskohoverkonten");
 const mydoithoverkonten = document.getElementById("mydoithoverkonten");
 
+eduworkhover.classList.add("bg-gray-200");
+
 eduworkhover.addEventListener("mouseover", function () {
   eduworkhoverkonten.classList.remove("hidden");
   defaulthoverkonten.classList.remove("flex");
