@@ -71,24 +71,24 @@
               <li>
                 <div
                   x-data="{
-                       open: false,
-                       toggle() {
-                             if (this.open) {
-                                return this.close()
-                             }
-           
-                             this.$refs.button.focus()
-           
-                             this.open = true
-                       },
-                       close(focusAfter) {
-                             if (! this.open) return
-           
-                             this.open = false
-           
-                             focusAfter &amp;&amp; focusAfter.focus()
-                       }
-                    }"
+                         open: false,
+                         toggle() {
+                               if (this.open) {
+                                  return this.close()
+                               }
+             
+                               this.$refs.button.focus()
+             
+                               this.open = true
+                         },
+                         close(focusAfter) {
+                               if (! this.open) return
+             
+                               this.open = false
+             
+                               focusAfter &amp;&amp; focusAfter.focus()
+                         }
+                      }"
                   x-on:keydown.escape.prevent.stop="close($refs.button)"
                   x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()"
                   x-id="['dropdown-button']"
@@ -241,16 +241,16 @@
                   </div>
                   <div class="w-1/2 flex flex-col gap-[15px]">
                     <div>
-                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
-                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Private & Flexible!</h3>
+                      <p class="text-[14px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[14px]">Program ini sudah termasuk dengan program jaminan kerja</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Belajar Intensif</h3>
+                      <p class="text-[14px]">Belajar didampingi virtual assistant & mentor expert via grup & 1-on-1 zoom mentoring</p>
                     </div>
                     <a
                       href="/portfolio-eduwork.html"
@@ -267,16 +267,16 @@
                   </div>
                   <div class="w-1/2 flex flex-col gap-[15px]">
                     <div>
-                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
-                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Private & Flexible!</h3>
+                      <p class="text-[14px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                      <p class="text-[14px]">Program ini sudah termasuk dengan program jaminan kerja</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Belajar Intensif</h3>
+                      <p class="text-[14px]">Belajar didampingi virtual assistant & mentor expert via grup & 1-on-1 zoom mentoring</p>
                     </div>
                     <a
                       href="/portfolio-eduwork.html"
@@ -293,16 +293,16 @@
                   </div>
                   <div class="w-1/2 flex flex-col gap-[15px]">
                     <div>
-                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
-                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Social Media Management</h3>
+                      <p class="text-[14px]">Kami membantu Anda memaksimalkan visibilitas, meningkatkan keterlibatan, dan membangun kesadaran merek yang kuat di platform media sosial</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Branding Identity Visual</h3>
+                      <p class="text-[14px]">Dengan perpaduan desain grafis yang kreatif dan konsep strategis, kami memberikan layanan yang tidak hanya memperkuat citra merek Anda</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Strategi Marketing</h3>
+                      <p class="text-[14px]">Strategi pemasaran digital dan kreatif khusus yang diinformasikan oleh penilaian yang kuat untuk bisnis Anda.</p>
                     </div>
                     <a
                       href="/portfolio-hisoc.html"
@@ -313,22 +313,22 @@
                 </div>
               </div>
               <div id="upscalehoverkonten" class="hidden">
-                <div class="flex flex-row">
+                <div class="flex flex-row items-center">
                   <div class="w-1/2">
-                    <img src="images/hisocnav.png" alt="" class="h-full w-auto" />
+                    <img src="images/upscalenav.png" alt="" class="h-full w-auto" />
                   </div>
                   <div class="w-1/2 flex flex-col gap-[15px]">
                     <div>
-                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
-                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Rekrut Talent Outsourcing</h3>
+                      <p class="text-[14px]">Anda dapat merekrut talenta terbaik sebagai karyawan outsource. Tim yang didedikasikan ini merupakan sumber daya manusia yang handal dan berkualitas, siap mendukung kebutuhan proyek Anda.</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Head Hunter</h3>
+                      <p class="text-[14px]">Rekrut talenta terbaik yang cocok dengan tim internal perusahaan Anda. Kami memudahkan pencarian dan seleksi kandidat sesuai kebutuhan dan budaya perusahaan.</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Project-Based</h3>
+                      <p class="text-[14px]">Optimalkan sumber daya proyek Anda dengan layanan Project-Based. Dapatkan vendor atau freelancer untuk menyelesaikan proyek tanpa perlu merekrut internal</p>
                     </div>
                     <a
                       href="/portfolio-upscale.html"
@@ -345,16 +345,16 @@
                   </div>
                   <div class="w-1/2 flex flex-col gap-[15px]">
                     <div>
-                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
-                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Website</h3>
+                      <p class="text-[14px]">Dapatkan website .com anda sendiri yang dapat melayani pembeli secara otomatis selama 24 jam x 7 hari non stop. Terintegrasi realtime dengan data stock</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Chat Bot</h3>
+                      <p class="text-[14px]">Dapatkan aplikasi widget webchat dengan fitur chatbot yang dapat otomatis merespon chat dari customer dan dapat dipasang di profile instagram.</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Tim Marketing</h3>
+                      <p class="text-[14px]">Tim Sosial Media Strategist kami siap bantu Anda memulai pemasaran produk secara digital.</p>
                     </div>
                     <a
                       href="/portfolio-sisko.html"
@@ -371,16 +371,16 @@
                   </div>
                   <div class="w-1/2 flex flex-col gap-[15px]">
                     <div>
-                      <h3 class="text-[18px] font-[600]">Private & Flexible!</h3>
-                      <p class="text-[16px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Tabungan & Investasi</h3>
+                      <p class="text-[14px]">Tabungan yang aman dan investasi yang cerdas menjadi landasan dari pendekatan kami, memberikan Anda keamanan finansial dan peluang pertumbuhan.</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Catatan Transaksi</h3>
+                      <p class="text-[14px]">Catat semua pemasukan dan pengeluaran secara real-time. Tidak ada lagi kwitansi kertas atau pengeluaran yang terlupakan. Sederhana, cepat, dan nyaman.</p>
                     </div>
                     <div>
-                      <h3 class="text-[18px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[16px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      <h3 class="text-[17px] font-[600]">Asuransi</h3>
+                      <p class="text-[14px]">Lindungi hal yang paling penting dengan solusi asuransi terintegrasi kami. Bandingkan dengan mudah dan pilih perlindungan yang tepat untuk melindungi masa depan keluargamu.</p>
                     </div>
                     <a
                       href="/portfolio-mydoit.html"
@@ -415,7 +415,7 @@
 
     <!-- Portfolio Content Start -->
     <div class="container mx-auto md:max-w-[1014px] w-full flex flex-col md:mt-[60px]">
-      <div class="flex md:flex-row flex-col justify-between w-[95%] md:w-full mx-auto">
+      <div class="hidden md:flex md:flex-row flex-col justify-between w-[95%] md:w-full mx-auto">
         <div class="p-[10px]">
           <a href="/portfolio-eduwork.html" class="md:text-[24px] font-[600] group transition duration-300">Eduwork <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span></a>
         </div>
@@ -443,7 +443,7 @@
         </select>
       </div> -->
 
-      <div class="flex md:flex-row flex-col w-[95%] md:w-full mx-auto items-center md:gap-[100px] md:mt-[40px] gap-[20px]">
+      <div class="flex md:flex-row flex-col w-[95%] md:w-full mx-auto items-center md:gap-[100px] md:mt-[40px] gap-[20px] mt-[30px]">
         <div class="flex flex-col md:w-1/2 gap-[20px] md:gap-0">
           <p class="md:mb-[20px] text-[#707070] md:text-[28px] text-[36px] font-bold text-center md:font-normal md:text-start">About Upscale</p>
           <p class="md:mb-[30px] md:text-[24px] font-[500] text-[23px] text-center md:text-start">Keep Growing With Forward Thinking With Us.</p>
@@ -457,8 +457,8 @@
         </div>
       </div>
 
-      <div class="flex md:flex-row flex-wrap mx-auto md:gap-[80px] gap-[30px] justify-center md:w-full w-[95%] mt-[60px]">
-        <div class="flex md:flex-row flex-col gap-[30px] md:gap-[80px]">
+      <div class="flex md:flex-row flex-wrap mx-auto md:gap-[210px] gap-[30px] justify-center md:w-full w-[95%] mt-[60px]">
+        <div class="flex md:flex-row flex-col gap-[30px] md:gap-[180px]">
           <div class="flex flex-row items-center gap-[10px]">
             <div
               class="flex p-[6px]"
@@ -471,8 +471,8 @@
               <img src="images/Done.png" alt="" class="w-auto h-[40px]" />
             </div>
             <div class="flex flex-col leading-[160%]">
-              <p class="text-[20px] md:text-[27px] font-[500]">800+</p>
-              <p class="text-[#8e8e8e] font-[400] text-[14px] md:text-[17px]">Total project finish</p>
+              <p class="text-[20px] md:text-[27px] font-[500]">100rb+</p>
+              <p class="text-[#8e8e8e] font-[400] text-[14px] md:text-[17px]">Total Talent Pool</p>
             </div>
           </div>
           <div class="flex flex-row items-center gap-[10px]">
@@ -487,8 +487,8 @@
               <img src="images/cart.png" alt="" class="w-auto h-[20px]" />
             </div>
             <div class="flex flex-col leading-[160%]">
-              <p class="text-[20px] md:text-[27px] font-[500]">26</p>
-              <p class="text-[#8e8e8e] font-[400] text-[14px] md:text-[17px]">Project last month</p>
+              <p class="text-[20px] md:text-[27px] font-[500]">7rb+</p>
+              <p class="text-[#8e8e8e] font-[400] text-[14px] md:text-[17px]">Talent Tersalurkan</p>
             </div>
           </div>
         </div>
@@ -502,33 +502,17 @@
                 backdrop-filter: blur(20px);
               "
             >
-              <img src="images/bag.png" alt="" class="w-auto h-[20px]" />
-            </div>
-            <div class="flex flex-col leading-[160%]">
-              <p class="text-[20px] md:text-[27px] font-[500]">12</p>
-              <p class="text-[#8e8e8e] font-[400] text-[14px] md:text-[17px]">Total Services</p>
-            </div>
-          </div>
-          <div class="flex flex-row items-center gap-[10px]">
-            <div
-              class="flex p-[10px] h-[50px] w-[50px] items-center justify-center"
-              style="
-                background: linear-gradient(96deg, #73787e -0.01%, #151c29 99.99%);
-
-                backdrop-filter: blur(20px);
-              "
-            >
               <img src="images/Happy.png" alt="" class="w-auto h-[25px]" />
             </div>
             <div class="flex flex-col leading-[160%]">
               <p class="text-[20px] md:text-[27px] font-[500]">750+</p>
-              <p class="text-[#8e8e8e] font-[400] text-[14px] md:text-[17px]">Happy Customer</p>
+              <p class="text-[#8e8e8e] font-[400] text-[14px] md:text-[17px]">Happy Client</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="flex md:flex-row flex-col w-[95%] md:w-full mx-auto mt-[60px]">
+      <div class="flex md:flex-row flex-col w-[95%] md:w-full mx-auto mt-[60px] md:items-start">
         <div class="flex md:w-1/2">
           <img src="images/port-service-1.png" alt="" class="h-auto" />
         </div>
@@ -536,36 +520,49 @@
           <p class="md:mb-[20px] text-[#707070] md:text-[28px] text-[26px] text-center md:text-start font-bold md:font-normal mt-[20px] md:mt-0">Our Service</p>
           <div class="flex flex-row justify-start gap-[20px] md:mb-[20px]">
             <div class="flex mt-[5px]">
-              <img src="images/checklist.png" alt="" class="h-[25px] w-[50px]" />
+              <img src="images/checklist.png" alt="" class="h-[25px] w-[90px] md:w-[70px]" />
             </div>
             <div class="flex flex-col gap-[10px]">
-              <p class="text-[24px] font-[500]">Increased Engagement</p>
-              <p class="text-[#828282]">We will assist in increased engagement so as to improve overall experience, motivation, learning, relationships and performance.</p>
+              <p class="text-[24px] font-[500]">Dedicated Team</p>
+              <p class="text-[#828282]">Anda dapat merekrut talenta terbaik sebagai karyawan outsource. Tim yang didedikasikan ini merupakan sumber daya manusia yang handal dan berkualitas, siap mendukung kebutuhan proyek Anda.</p>
             </div>
           </div>
           <div class="flex flex-row justify-start gap-[20px] md:mb-[20px]">
             <div class="flex mt-[5px]">
-              <img src="images/checklist.png" alt="" class="h-[25px] w-[50px]" />
+              <img src="images/checklist.png" alt="" class="h-[25px] w-[70px] md:w-[50px]" />
             </div>
             <div class="flex flex-col gap-[10px]">
-              <p class="text-[24px] font-[500]">Brand Awareness</p>
-              <p class="text-[#828282]">Increase your sensitivity to brand awarnes, so you can Strengthen positive image, Increase consumer loyalty, Facilitate decision making,</p>
+              <p class="text-[24px] font-[500]">Freelance Team</p>
+              <p class="text-[#828282]">Menggandeng talenta freelance berbasis man-hour, layanan Freelance Team memberikan fleksibilitas untuk menyelesaikan proyek-proyek Anda.</p>
             </div>
           </div>
-          <div class="flex flex-row justify-start gap-[20px]">
+          <div class="flex flex-row justify-start gap-[20px] md:mb-[20px]">
             <div class="flex mt-[5px]">
-              <img src="images/checklist.png" alt="" class="h-[25px] w-[50px]" />
+              <img src="images/checklist.png" alt="" class="h-[25px] w-[110px] md:w-[80px]" />
             </div>
             <div class="flex flex-col gap-[10px]">
-              <p class="text-[24px] font-[500]">Audience Growth</p>
-              <p class="text-[#828282]">Our team will assist in the aspect of audience growth, so as to increase brand awareness, increase sales and expand the market.</p>
+              <p class="text-[24px] font-[500]">Head Hunter</p>
+              <p class="text-[#828282]">
+                Dengan layanan Head Hunter, Anda dapat merekrut talenta terbaik untuk menjadi bagian dari tim internal perusahaan Anda. Kami membantu Anda menemukan dan memilih kandidat yang sesuai dengan kebutuhan dan budaya perusahaan.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-row justify-start gap-[20px] md:mb-[20px]">
+            <div class="flex mt-[5px]">
+              <img src="images/checklist.png" alt="" class="h-[25px] w-[110px] md:w-[80px]" />
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <p class="text-[24px] font-[500]">Project-Based</p>
+              <p class="text-[#828282]">
+                Hire vendor atau freelancer berbasis proyek melalui layanan Project-Based. Dengan pendekatan ini, Anda dapat mengakses sumber daya tambahan untuk menyelesaikan proyek tertentu tanpa harus melakukan perekrutan internal.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       <div class="flex flex-col mt-[60px] mb-[30px]">
-        <p class="text-center text-[#707070] text-[27px] font-[500]">HiSocial Digital Historical Timeline</p>
+        <p class="text-center text-[#707070] text-[27px] font-[500]">Upscale Historical Timeline</p>
       </div>
 
       <div class="hidden md:flex flex-row w-full border-b-[3px] border-black h-[220px]">
