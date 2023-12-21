@@ -7,386 +7,396 @@
   </head>
   <body class="font-roboto">
     <!-- NavBar Start -->
-    <div class="w-full z-50 font-roboto" id="navbar">
-      <nav class="fixed w-full z-50 top-0 left-0">
-        <div class="max-w-[1100px] flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="images/logo-white.png" class="h-[32px]" alt="Flowbite Logo" />
-          </a>
+    <div class="w-full z-50 font-roboto">
+      <nav class="fixed w-full z-50 top-0 left-0 h-max">
+        <div id="navbar" class="w-full">
+          <div class="max-w-[1100px] flex flex-wrap items-center justify-between mx-auto p-4 bg-b">
+            <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="images/logo-white.png" class="h-[32px]" alt="Flowbite Logo" />
+            </a>
 
-          <div class="hidden md:flex flex-wrap items-center justify-between gap-[85px]">
-            <div class="flex">
-              <a href="/index.html" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">Home <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span></a>
-            </div>
-            <div class="flex">
-              <a href="/history.html" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">History<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span></a>
-            </div>
-            <div class="flex">
-              <a href="/our-team.html" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">Team<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span></a>
-            </div>
-            <div class="flex">
-              <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" aria-expanded="false" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">
-                <div class="flex items-center">
-                  <p>Portfolio</p>
-                  <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-                  </svg>
-                </div>
-                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span>
-              </button>
-            </div>
-            <div class="flex">
-              <a href="/news.html" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">News<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span></a>
-            </div>
-          </div>
-          <div class="hidden md:flex flex-row justify-center items-center">
-            <a href="" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 font-[300]">ID</a>
-            <div class="border border-l-white h-[30px] mr-[10.5px] ml-[9px]"></div>
-            <a href="" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 font-[300]">EN</a>
-          </div>
-
-          <button
-            data-collapse-toggle="navbar-default"
-            type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-            </svg>
-          </button>
-          <div class="hidden w-full md:w-auto" id="navbar-default">
-            <ul class="flex flex-col p-4 md:p-0 mt-4 font-light border md:justify-between border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
-              <li>
-                <a href="/index.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 font-[300]">Home</a>
-              </li>
-              <li>
-                <a href="/history.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">History</a>
-              </li>
-              <li>
-                <a href="/our-team.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">Team</a>
-              </li>
-              <li>
-                <div
-                  x-data="{
-                         open: false,
-                         toggle() {
-                               if (this.open) {
-                                  return this.close()
-                               }
-             
-                               this.$refs.button.focus()
-             
-                               this.open = true
-                         },
-                         close(focusAfter) {
-                               if (! this.open) return
-             
-                               this.open = false
-             
-                               focusAfter &amp;&amp; focusAfter.focus()
-                         }
-                      }"
-                  x-on:keydown.escape.prevent.stop="close($refs.button)"
-                  x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()"
-                  x-id="['dropdown-button']"
-                >
-                  <button
-                    x-ref="button"
-                    x-on:click="toggle()"
-                    :aria-expanded="open"
-                    :aria-controls="$id('dropdown-button')"
-                    type="button"
-                    class="text-base text-gray-900 font-[300] text-primary lg:text-sm lg:font-[500] flex items-center justify-between w-full py-2 pl-3 pr-4 rounded hover:bg-gray-100 lg:hover:bg-white lg:border-0 lg:p-0 lg:w-auto"
-                    aria-expanded="false"
-                    aria-controls="dropdown-button-3"
-                  >
-                    Portfolio
-                    <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            <div class="hidden md:flex flex-wrap items-center justify-between gap-[85px]">
+              <div class="flex">
+                <a href="/index.html" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">Home <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span></a>
+              </div>
+              <div class="flex">
+                <a href="/history.html" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">History<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span></a>
+              </div>
+              <div class="flex">
+                <a href="/our-team.html" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">Team<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span></a>
+              </div>
+              <div class="flex">
+                <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" aria-expanded="false" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">
+                  <div class="flex items-center">
+                    <p>Portfolio</p>
+                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
                     </svg>
-                  </button>
-                  <div
-                    x-ref="panel"
-                    x-show="open"
-                    x-transition.origin.top.left=""
-                    x-on:click.outside="close($refs.button)"
-                    :id="$id('dropdown-button')"
-                    style="display: none"
-                    class="relative lg:absolute left-0 mt-[25px] w-full lg:w-40 rounded-md bg-white shadow-none lg:shadow-s2"
-                    id="dropdown-button-3"
-                  >
-                    <a href="/portfolio-eduwork.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
-                      >Eduwork</a
-                    >
-                    <a href="/portfolio-hisoc.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
-                      >HiSocial Digital</a
-                    >
-                    <a href="/portfolio-upscale.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
-                      >Upscale</a
-                    >
-                    <a href="/portfolio-sisko.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
-                      >SISKO</a
-                    >
-                    <a href="/portfolio-mydoit.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
-                      >MyDoit</a
-                    >
                   </div>
-                </div>
-              </li>
-              <li>
-                <a href="/news.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">News</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="mega-menu-full-dropdown" class="hidden mb-[20px] max-w-[1100px] mx-auto mt-1 rounded-[20px] md:bg-white">
-          <div class="flex flex-row max-w-[1100px] px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:px-6">
-            <div class="w-[42%]">
-              <ul class="text-black">
-                <li>
-                  <a href="/portfolio-eduwork.html" id="eduworkhover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
-                    <div class="flex flex-row items-center gap-[15px]">
-                      <img src="images/logo/eduworkpic.png" alt="" class="w-auto h-[30px]" />
+                  <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span>
+                </button>
+              </div>
+              <div class="flex">
+                <a href="/news.html" class="block py-2 pl-3 pr-4 group transition duration-300 text-white font-[300]">News<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"></span></a>
+              </div>
+            </div>
+            <div class="hidden md:flex flex-row justify-center items-center">
+              <a href="" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 font-[300]">ID</a>
+              <div class="border border-l-white h-[30px] mr-[10.5px] ml-[9px]"></div>
+              <a href="" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 font-[300]">EN</a>
+            </div>
 
-                      <div>
-                        <p class="font-[500]">Eduwork</p>
-                        <p class="font-[400] text-[12px]">Platform e-learning terdepan di Indonesia, menawarkan layanan pembelajaran online terbaik.</p>
-                      </div>
-                    </div>
-                    <div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                        <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </div>
-                  </a>
+            <button
+              data-collapse-toggle="navbar-default"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-default"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+              </svg>
+            </button>
+            <div class="hidden w-full md:w-auto" id="navbar-default">
+              <ul class="flex flex-col p-4 md:p-0 mt-4 font-light border md:justify-between border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
+                <li>
+                  <a href="/index.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 font-[300]">Home</a>
                 </li>
                 <li>
-                  <a href="/portfolio-hisoc.html" id="hisochover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
-                    <div class="flex flex-row items-center gap-[20px]">
-                      <img src="images/logo/hisocpic.png" alt="" class="w-auto h-[30px]" />
-
-                      <div>
-                        <p class="font-[500]">HiSocial Digital</p>
-                        <p class="font-[400] text-[12px]">Perusahaan Pemasaran dan Desain Kreatif yang berkomitmen pada Pengalaman Produk Terbaik</p>
-                      </div>
-                    </div>
-                    <div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                        <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </div>
-                  </a>
+                  <a href="/history.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">History</a>
                 </li>
                 <li>
-                  <a href="/portfolio-upscale.html" id="upscalehover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
-                    <div class="flex flex-row items-center gap-[20px]">
-                      <img src="images/logo/upsaclepic.png" alt="" class="w-auto h-[20px]" />
-
-                      <div>
-                        <p class="font-[500]">Upscale</p>
-                        <p class="font-[400] text-[12px]">Solusi Lengkap Rekrutmen Talent untuk Pengembangan Bisnis, Dengan Akses ke Jaringan Eksklusif untuk Pilihan Terbaik</p>
-                      </div>
-                    </div>
-                    <div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                        <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </div>
-                  </a>
+                  <a href="/our-team.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">Team</a>
                 </li>
                 <li>
-                  <a href="/portfolio-sisko.html" id="siskohover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
-                    <div class="flex flex-row items-center gap-[20px]">
-                      <img src="images/logo/siskopic.png" alt="" class="w-auto h-[30px]" />
-
-                      <div>
-                        <p class="font-[500]">SISKO</p>
-                        <p class="font-[400] text-[12px]">Layanan untuk mengoptimalkan performa toko, baik online maupun offline, dengan teknologi modern.</p>
-                      </div>
-                    </div>
-                    <div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                        <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <div
+                    x-data="{
+                       open: false,
+                       toggle() {
+                             if (this.open) {
+                                return this.close()
+                             }
+           
+                             this.$refs.button.focus()
+           
+                             this.open = true
+                       },
+                       close(focusAfter) {
+                             if (! this.open) return
+           
+                             this.open = false
+           
+                             focusAfter &amp;&amp; focusAfter.focus()
+                       }
+                    }"
+                    x-on:keydown.escape.prevent.stop="close($refs.button)"
+                    x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()"
+                    x-id="['dropdown-button']"
+                  >
+                    <button
+                      x-ref="button"
+                      x-on:click="toggle()"
+                      :aria-expanded="open"
+                      :aria-controls="$id('dropdown-button')"
+                      type="button"
+                      class="text-base text-gray-900 font-[300] text-primary lg:text-sm lg:font-[500] flex items-center justify-between w-full py-2 pl-3 pr-4 rounded hover:bg-gray-100 lg:hover:bg-white lg:border-0 lg:p-0 lg:w-auto"
+                      aria-expanded="false"
+                      aria-controls="dropdown-button-3"
+                    >
+                      Portfolio
+                      <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                       </svg>
+                    </button>
+                    <div
+                      x-ref="panel"
+                      x-show="open"
+                      x-transition.origin.top.left=""
+                      x-on:click.outside="close($refs.button)"
+                      :id="$id('dropdown-button')"
+                      style="display: none"
+                      class="relative lg:absolute left-0 mt-[25px] w-full lg:w-40 rounded-md bg-white shadow-none lg:shadow-s2"
+                      id="dropdown-button-3"
+                    >
+                      <a
+                        href="/portfolio-eduwork.html"
+                        class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                        >Eduwork</a
+                      >
+                      <a href="/portfolio-hisoc.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                        >HiSocial Digital</a
+                      >
+                      <a
+                        href="/portfolio-upscale.html"
+                        class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                        >Upscale</a
+                      >
+                      <a href="/portfolio-sisko.html" class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                        >SISKO</a
+                      >
+                      <a
+                        href="/portfolio-mydoit.html"
+                        class="flex text-base font-[400] lg:text-sm lg:font-[500] gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                        >MyDoit</a
+                      >
                     </div>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href="/portfolio-mydoit.html" id="mydoithover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
-                    <div class="flex flex-row items-center gap-[20px]">
-                      <img src="images/logo/mydoitpic.png" alt="" class="w-auto h-[30px]" />
-
-                      <div>
-                        <p class="font-[500]">MyDoit</p>
-                        <p class="font-[400] text-[12px]">Aplikasi Finansial Inovatif untuk Pengelolaan Keuangan Pribadi dan Bisnis, dengan Fitur Lengkap, dan Kontrol Keuangan yang Mudah.</p>
-                      </div>
-                    </div>
-                    <div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                        <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </div>
-                  </a>
+                  <a href="/news.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0 font-[300]">News</a>
                 </li>
               </ul>
             </div>
-            <div class="w-[58%] m-auto">
-              <div id="defaulthoverkonten" class="flex">
-                <div class="flex flex-row">
-                  <div class="w-1/2">
-                    <img src="images/eduworknav.png" alt="" class="h-full w-auto" />
-                  </div>
-                  <div class="w-1/2 flex flex-col gap-[15px]">
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Private & Flexible!</h3>
-                      <p class="text-[14px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+          </div>
+        </div>
+        <div id="mega-menu-full-dropdown" class="hidden h-screen p-[90px] mt-[-70px]" style="background: rgb(0, 0, 0); background: linear-gradient(34deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.72) 100%)">
+          <div class="mb-[20px] max-w-[1100px] m-auto rounded-[20px] md:bg-white">
+            <div class="flex flex-row max-w-[1100px] px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:px-6">
+              <div class="w-[42%]">
+                <ul class="text-black">
+                  <li>
+                    <a href="/portfolio-eduwork.html" id="eduworkhover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
+                      <div class="flex flex-row items-center gap-[15px]">
+                        <img src="images/logo/eduworkpic.png" alt="" class="w-auto h-[30px]" />
+
+                        <div>
+                          <p class="font-[500]">Eduwork</p>
+                          <p class="font-[400] text-[12px]">Platform e-learning terdepan di Indonesia, menawarkan layanan pembelajaran online terbaik.</p>
+                        </div>
+                      </div>
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                          <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/portfolio-hisoc.html" id="hisochover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
+                      <div class="flex flex-row items-center gap-[20px]">
+                        <img src="images/logo/hisocpic.png" alt="" class="w-auto h-[30px]" />
+
+                        <div>
+                          <p class="font-[500]">HiSocial Digital</p>
+                          <p class="font-[400] text-[12px]">Perusahaan Pemasaran dan Desain Kreatif yang berkomitmen pada Pengalaman Produk Terbaik</p>
+                        </div>
+                      </div>
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                          <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/portfolio-upscale.html" id="upscalehover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
+                      <div class="flex flex-row items-center gap-[20px]">
+                        <img src="images/logo/upsaclepic.png" alt="" class="w-auto h-[20px]" />
+
+                        <div>
+                          <p class="font-[500]">Upscale</p>
+                          <p class="font-[400] text-[12px]">Solusi Lengkap Rekrutmen Talent untuk Pengembangan Bisnis, Dengan Akses ke Jaringan Eksklusif untuk Pilihan Terbaik</p>
+                        </div>
+                      </div>
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                          <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/portfolio-sisko.html" id="siskohover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
+                      <div class="flex flex-row items-center gap-[20px]">
+                        <img src="images/logo/siskopic.png" alt="" class="w-auto h-[30px]" />
+
+                        <div>
+                          <p class="font-[500]">SISKO</p>
+                          <p class="font-[400] text-[12px]">Layanan untuk mengoptimalkan performa toko, baik online maupun offline, dengan teknologi modern.</p>
+                        </div>
+                      </div>
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                          <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/portfolio-mydoit.html" id="mydoithover" class="flex flex-row justify-between items-center p-3 rounded-lg hover:text-black hover:bg-gray-200">
+                      <div class="flex flex-row items-center gap-[20px]">
+                        <img src="images/logo/mydoitpic.png" alt="" class="w-auto h-[30px]" />
+
+                        <div>
+                          <p class="font-[500]">MyDoit</p>
+                          <p class="font-[400] text-[12px]">Aplikasi Finansial Inovatif untuk Pengelolaan Keuangan Pribadi dan Bisnis, dengan Fitur Lengkap, dan Kontrol Keuangan yang Mudah.</p>
+                        </div>
+                      </div>
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                          <path d="M6.15625 4L10.1563 8L6.15625 12" stroke="#686868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-[58%] m-auto h-[100%]">
+                <div id="defaulthoverkonten" class="flex">
+                  <div class="flex flex-row">
+                    <div class="w-1/2">
+                      <img src="images/eduworknav.png" alt="" class="h-full w-auto" />
                     </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[14px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    <div class="w-1/2 flex flex-col gap-[15px]">
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Private & Flexible!</h3>
+                        <p class="text-[14px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                        <p class="text-[14px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Belajar Intensif</h3>
+                        <p class="text-[14px]">Belajar didampingi virtual assistant & mentor expert via grup & 1-on-1 zoom mentoring</p>
+                      </div>
+                      <a
+                        href="/portfolio-eduwork.html"
+                        class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                        >Selengkapnya</a
+                      >
                     </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Belajar Intensif</h3>
-                      <p class="text-[14px]">Belajar didampingi virtual assistant & mentor expert via grup & 1-on-1 zoom mentoring</p>
-                    </div>
-                    <a
-                      href="/portfolio-eduwork.html"
-                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
-                      >Selengkapnya</a
-                    >
                   </div>
                 </div>
-              </div>
-              <div id="eduworkhoverkonten" class="hidden">
-                <div class="flex flex-row">
-                  <div class="w-1/2">
-                    <img src="images/eduworknav.png" alt="" class="h-full w-auto" />
-                  </div>
-                  <div class="w-1/2 flex flex-col gap-[15px]">
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Private & Flexible!</h3>
-                      <p class="text-[14px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                <div id="eduworkhoverkonten" class="hidden">
+                  <div class="flex flex-row">
+                    <div class="w-1/2">
+                      <img src="images/eduworknav.png" alt="" class="h-full w-auto" />
                     </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
-                      <p class="text-[14px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                    <div class="w-1/2 flex flex-col gap-[15px]">
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Private & Flexible!</h3>
+                        <p class="text-[14px]">Dapatkan fasilitas belajar 1on1 mentoring dan bisa disesuaikan sesuai waktu yang diinginkan. Dijamin sampai bisa & tersalurkan kerja</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Jaminan dan Penyaluran Kerja</h3>
+                        <p class="text-[14px]">Program ini sudah termasuk dengan program jaminan kerja</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Belajar Intensif</h3>
+                        <p class="text-[14px]">Belajar didampingi virtual assistant & mentor expert via grup & 1-on-1 zoom mentoring</p>
+                      </div>
+                      <a
+                        href="/portfolio-eduwork.html"
+                        class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                        >Selengkapnya</a
+                      >
                     </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Belajar Intensif</h3>
-                      <p class="text-[14px]">Belajar didampingi virtual assistant & mentor expert via grup & 1-on-1 zoom mentoring</p>
-                    </div>
-                    <a
-                      href="/portfolio-eduwork.html"
-                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
-                      >Selengkapnya</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div id="hisochoverkonten" class="hidden">
-                <div class="flex flex-row">
-                  <div class="w-1/2">
-                    <img src="images/hisocnav.png" alt="" class="h-full w-auto" />
-                  </div>
-                  <div class="w-1/2 flex flex-col gap-[15px]">
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Social Media Management</h3>
-                      <p class="text-[14px]">Kami membantu Anda memaksimalkan visibilitas, meningkatkan keterlibatan, dan membangun kesadaran merek yang kuat di platform media sosial</p>
-                    </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Branding Identity Visual</h3>
-                      <p class="text-[14px]">Dengan perpaduan desain grafis yang kreatif dan konsep strategis, kami memberikan layanan yang tidak hanya memperkuat citra merek Anda</p>
-                    </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Strategi Marketing</h3>
-                      <p class="text-[14px]">Strategi pemasaran digital dan kreatif khusus yang diinformasikan oleh penilaian yang kuat untuk bisnis Anda.</p>
-                    </div>
-                    <a
-                      href="/portfolio-hisoc.html"
-                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
-                      >Selengkapnya</a
-                    >
                   </div>
                 </div>
-              </div>
-              <div id="upscalehoverkonten" class="hidden">
-                <div class="flex flex-row items-center">
-                  <div class="w-1/2">
-                    <img src="images/upscalenav.png" alt="" class="h-full w-auto" />
-                  </div>
-                  <div class="w-1/2 flex flex-col gap-[15px]">
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Rekrut Talent Outsourcing</h3>
-                      <p class="text-[14px]">Anda dapat merekrut talenta terbaik sebagai karyawan outsource. Tim yang didedikasikan ini merupakan sumber daya manusia yang handal dan berkualitas, siap mendukung kebutuhan proyek Anda.</p>
+                <div id="hisochoverkonten" class="hidden">
+                  <div class="flex flex-row">
+                    <div class="w-1/2">
+                      <img src="images/hisocnav.png" alt="" class="h-full w-auto" />
                     </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Head Hunter</h3>
-                      <p class="text-[14px]">Rekrut talenta terbaik yang cocok dengan tim internal perusahaan Anda. Kami memudahkan pencarian dan seleksi kandidat sesuai kebutuhan dan budaya perusahaan.</p>
+                    <div class="w-1/2 flex flex-col gap-[15px]">
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Social Media Management</h3>
+                        <p class="text-[14px]">Kami membantu Anda memaksimalkan visibilitas, meningkatkan keterlibatan, dan membangun kesadaran merek yang kuat di platform media sosial</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Branding Identity Visual</h3>
+                        <p class="text-[14px]">Dengan perpaduan desain grafis yang kreatif dan konsep strategis, kami memberikan layanan yang tidak hanya memperkuat citra merek Anda</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Strategi Marketing</h3>
+                        <p class="text-[14px]">Strategi pemasaran digital dan kreatif khusus yang diinformasikan oleh penilaian yang kuat untuk bisnis Anda.</p>
+                      </div>
+                      <a
+                        href="/portfolio-hisoc.html"
+                        class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                        >Selengkapnya</a
+                      >
                     </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Project-Based</h3>
-                      <p class="text-[14px]">Optimalkan sumber daya proyek Anda dengan layanan Project-Based. Dapatkan vendor atau freelancer untuk menyelesaikan proyek tanpa perlu merekrut internal</p>
-                    </div>
-                    <a
-                      href="/portfolio-upscale.html"
-                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
-                      >Selengkapnya</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div id="siskohoverkonten" class="hidden">
-                <div class="flex flex-row">
-                  <div class="w-1/2">
-                    <img src="images/siskonav.png" alt="" class="h-full w-auto" />
-                  </div>
-                  <div class="w-1/2 flex flex-col gap-[15px]">
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Website</h3>
-                      <p class="text-[14px]">Dapatkan website .com anda sendiri yang dapat melayani pembeli secara otomatis selama 24 jam x 7 hari non stop. Terintegrasi realtime dengan data stock</p>
-                    </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Chat Bot</h3>
-                      <p class="text-[14px]">Dapatkan aplikasi widget webchat dengan fitur chatbot yang dapat otomatis merespon chat dari customer dan dapat dipasang di profile instagram.</p>
-                    </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Tim Marketing</h3>
-                      <p class="text-[14px]">Tim Sosial Media Strategist kami siap bantu Anda memulai pemasaran produk secara digital.</p>
-                    </div>
-                    <a
-                      href="/portfolio-sisko.html"
-                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
-                      >Selengkapnya</a
-                    >
                   </div>
                 </div>
-              </div>
-              <div id="mydoithoverkonten" class="hidden">
-                <div class="flex flex-row">
-                  <div class="w-1/2">
-                    <img src="images/mydoitnav.png" alt="" class="h-full w-auto" />
+                <div id="upscalehoverkonten" class="hidden">
+                  <div class="flex flex-row items-center">
+                    <div class="w-1/2">
+                      <img src="images/upscalenav.png" alt="" class="h-full w-auto" />
+                    </div>
+                    <div class="w-1/2 flex flex-col gap-[15px]">
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Rekrut Talent Outsourcing</h3>
+                        <p class="text-[14px]">Anda dapat merekrut talenta terbaik sebagai karyawan outsource. Tim yang didedikasikan ini merupakan sumber daya manusia yang handal dan berkualitas, siap mendukung kebutuhan proyek Anda.</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Head Hunter</h3>
+                        <p class="text-[14px]">Rekrut talenta terbaik yang cocok dengan tim internal perusahaan Anda. Kami memudahkan pencarian dan seleksi kandidat sesuai kebutuhan dan budaya perusahaan.</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Project-Based</h3>
+                        <p class="text-[14px]">Optimalkan sumber daya proyek Anda dengan layanan Project-Based. Dapatkan vendor atau freelancer untuk menyelesaikan proyek tanpa perlu merekrut internal</p>
+                      </div>
+                      <a
+                        href="/portfolio-upscale.html"
+                        class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                        >Selengkapnya</a
+                      >
+                    </div>
                   </div>
-                  <div class="w-1/2 flex flex-col gap-[15px]">
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Tabungan & Investasi</h3>
-                      <p class="text-[14px]">Tabungan yang aman dan investasi yang cerdas menjadi landasan dari pendekatan kami, memberikan Anda keamanan finansial dan peluang pertumbuhan.</p>
+                </div>
+                <div id="siskohoverkonten" class="hidden">
+                  <div class="flex flex-row">
+                    <div class="w-1/2">
+                      <img src="images/siskonav.png" alt="" class="h-full w-auto" />
                     </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Catatan Transaksi</h3>
-                      <p class="text-[14px]">Catat semua pemasukan dan pengeluaran secara real-time. Tidak ada lagi kwitansi kertas atau pengeluaran yang terlupakan. Sederhana, cepat, dan nyaman.</p>
+                    <div class="w-1/2 flex flex-col gap-[15px]">
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Website</h3>
+                        <p class="text-[14px]">Dapatkan website .com anda sendiri yang dapat melayani pembeli secara otomatis selama 24 jam x 7 hari non stop. Terintegrasi realtime dengan data stock</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Chat Bot</h3>
+                        <p class="text-[14px]">Dapatkan aplikasi widget webchat dengan fitur chatbot yang dapat otomatis merespon chat dari customer dan dapat dipasang di profile instagram.</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Tim Marketing</h3>
+                        <p class="text-[14px]">Tim Sosial Media Strategist kami siap bantu Anda memulai pemasaran produk secara digital.</p>
+                      </div>
+                      <a
+                        href="/portfolio-sisko.html"
+                        class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                        >Selengkapnya</a
+                      >
                     </div>
-                    <div>
-                      <h3 class="text-[17px] font-[600]">Asuransi</h3>
-                      <p class="text-[14px]">Lindungi hal yang paling penting dengan solusi asuransi terintegrasi kami. Bandingkan dengan mudah dan pilih perlindungan yang tepat untuk melindungi masa depan keluargamu.</p>
+                  </div>
+                </div>
+                <div id="mydoithoverkonten" class="hidden">
+                  <div class="flex flex-row">
+                    <div class="w-1/2">
+                      <img src="images/mydoitnav.png" alt="" class="h-full w-auto" />
                     </div>
-                    <a
-                      href="/portfolio-mydoit.html"
-                      class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
-                      >Selengkapnya</a
-                    >
+                    <div class="w-1/2 flex flex-col gap-[15px]">
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Tabungan & Investasi</h3>
+                        <p class="text-[14px]">Tabungan yang aman dan investasi yang cerdas menjadi landasan dari pendekatan kami, memberikan Anda keamanan finansial dan peluang pertumbuhan.</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Catatan Transaksi</h3>
+                        <p class="text-[14px]">Catat semua pemasukan dan pengeluaran secara real-time. Tidak ada lagi kwitansi kertas atau pengeluaran yang terlupakan. Sederhana, cepat, dan nyaman.</p>
+                      </div>
+                      <div>
+                        <h3 class="text-[17px] font-[600]">Asuransi</h3>
+                        <p class="text-[14px]">Lindungi hal yang paling penting dengan solusi asuransi terintegrasi kami. Bandingkan dengan mudah dan pilih perlindungan yang tepat untuk melindungi masa depan keluargamu.</p>
+                      </div>
+                      <a
+                        href="/portfolio-mydoit.html"
+                        class="relative md:ml-0 text-center px-[10px] py-[7px] w-full md:w-full font-[450] border border-slate-500 text-[20px] md:text-[15px] bg-white text-gray-900 mr-[6px] rounded-full duration-700 ease-in-out hover:bg-black hover:text-white"
+                        >Selengkapnya</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
@@ -892,94 +902,5 @@
         prevEl: ".next",
       },
     });
-  </script>
-  <script>
-    const eduworkhover = document.getElementById("eduworkhover");
-    const hisochover = document.getElementById("hisochover");
-    const upscalehover = document.getElementById("upscalehover");
-    const siskohover = document.getElementById("siskohover");
-    const mydoithover = document.getElementById("mydoithover");
-
-    const defaulthoverkonten = document.getElementById("defaulthoverkonten");
-    const eduworkhoverkonten = document.getElementById("eduworkhoverkonten");
-    const hisochoverkonten = document.getElementById("hisochoverkonten");
-    const upscalehoverkonten = document.getElementById("upscalehoverkonten");
-    const siskohoverkonten = document.getElementById("siskohoverkonten");
-    const mydoithoverkonten = document.getElementById("mydoithoverkonten");
-
-    eduworkhover.addEventListener("mouseover", function () {
-      eduworkhoverkonten.classList.remove("hidden");
-      defaulthoverkonten.classList.remove("flex");
-      defaulthoverkonten.classList.add("hidden");
-      hisochoverkonten.classList.add("hidden");
-      upscalehoverkonten.classList.add("hidden");
-      siskohoverkonten.classList.add("hidden");
-      mydoithoverkonten.classList.add("hidden");
-    });
-    // eduworkhover.addEventListener("mouseout", function () {
-    //   eduworkhoverkonten.classList.add("hidden");
-    //   defaulthoverkonten.classList.add("flex");
-    //   defaulthoverkonten.classList.remove("hidden");
-    // });
-
-    hisochover.addEventListener("mouseover", function () {
-      hisochoverkonten.classList.remove("hidden");
-      defaulthoverkonten.classList.remove("flex");
-      defaulthoverkonten.classList.add("hidden");
-      eduworkhoverkonten.classList.add("hidden");
-      upscalehoverkonten.classList.add("hidden");
-      siskohoverkonten.classList.add("hidden");
-      mydoithoverkonten.classList.add("hidden");
-    });
-    // hisochover.addEventListener("mouseout", function () {
-    //   hisochoverkonten.classList.add("hidden");
-    //   defaulthoverkonten.classList.add("flex");
-    //   defaulthoverkonten.classList.remove("hidden");
-    // });
-
-    upscalehover.addEventListener("mouseover", function () {
-      upscalehoverkonten.classList.remove("hidden");
-      defaulthoverkonten.classList.remove("flex");
-      defaulthoverkonten.classList.add("hidden");
-      eduworkhoverkonten.classList.add("hidden");
-      hisochoverkonten.classList.add("hidden");
-      siskohoverkonten.classList.add("hidden");
-      mydoithoverkonten.classList.add("hidden");
-    });
-    // upscalehover.addEventListener("mouseout", function () {
-    //   upscalehoverkonten.classList.add("hidden");
-    //   defaulthoverkonten.classList.add("flex");
-    //   defaulthoverkonten.classList.remove("hidden");
-    // });
-
-    siskohover.addEventListener("mouseover", function () {
-      siskohoverkonten.classList.remove("hidden");
-      defaulthoverkonten.classList.remove("flex");
-      defaulthoverkonten.classList.add("hidden");
-      eduworkhoverkonten.classList.add("hidden");
-      upscalehoverkonten.classList.add("hidden");
-      hisochoverkonten.classList.add("hidden");
-      mydoithoverkonten.classList.add("hidden");
-    });
-    // siskohover.addEventListener("mouseout", function () {
-    //   siskohoverkonten.classList.add("hidden");
-    //   defaulthoverkonten.classList.add("flex");
-    //   defaulthoverkonten.classList.remove("hidden");
-    // });
-
-    mydoithover.addEventListener("mouseover", function () {
-      mydoithoverkonten.classList.remove("hidden");
-      defaulthoverkonten.classList.remove("flex");
-      defaulthoverkonten.classList.add("hidden");
-      eduworkhoverkonten.classList.add("hidden");
-      upscalehoverkonten.classList.add("hidden");
-      siskohoverkonten.classList.add("hidden");
-      hisochoverkonten.classList.add("hidden");
-    });
-    // mydoithover.addEventListener("mouseout", function () {
-    //   mydoithoverkonten.classList.add("hidden");
-    //   defaulthoverkonten.classList.add("flex");
-    //   defaulthoverkonten.classList.remove("hidden");
-    // });
   </script>
 </html>
